@@ -34,6 +34,33 @@ const theme = createTheme({
       900: "rgba(33, 29, 29, 0.88)",
     },
   },
+  typography: {
+    htmlFontSize: 10,
+    fontSize: 10,
+    body1: {
+      fontFamily: "Open Sans",
+      fontSize: "2.4rem",
+    },
+    body2: {
+      fontFamily: "Open Sans",
+      fontSize: "1.4rem",
+    },
+    h1: {
+      fontFamily: "Roboto Mono",
+      fontSize: "4.8rem",
+    },
+    h2: {
+      fontFamily: "Open Sans",
+      fontSize: "3.6rem",
+    },
+    subtitle1: {
+      fontSize: "2.4rem",
+    },
+    button: {
+      fontWeight: 600,
+      fontSize: "1.8rem",
+    },
+  },
   shadows: [
     "none",
     "0px 4px 50px rgba(0, 0, 0, 0.25)",
