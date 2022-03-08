@@ -1,8 +1,9 @@
 import { createTheme } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
+import { responsiveFontSizes } from "@mui/material";
+import componentStyleOverrides from "./componentStyleOverrides";
 
 // Create a theme instance.
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     background: {
       default:
@@ -37,9 +38,29 @@ const theme = createTheme({
   typography: {
     htmlFontSize: 10,
     fontSize: 10,
+  },
+  shape: {
+    borderRadius: "10px",
+  },
+  shadows: [
+    "none",
+    "0px 4px 50px rgba(0, 0, 0, 0.25)",
+    "0px 4px 4px rgba(31, 31, 31, 0.1)",
+  ],
+  spacing: ["5px", "15px", "20px", "24px", "25px", "30px", "40px", "60px"],
+});
+
+theme = {
+  ...theme,
+  components: componentStyleOverrides,
+  typography: {
+    ...theme.typography,
     body1: {
       fontFamily: "Open Sans",
-      fontSize: "2.4rem",
+      fontSize: "1.8rem",
+      [theme.breakpoints.up("md")]: {
+        fontSize: "2.4rem",
+      },
     },
     body2: {
       fontFamily: "Open Sans",
@@ -47,7 +68,12 @@ const theme = createTheme({
     },
     h1: {
       fontFamily: "Roboto Mono",
-      fontSize: "4.8rem",
+      fontSize: "2.4rem",
+      fontWeight: 400,
+      wordSpacing: "-5px",
+      [theme.breakpoints.up("md")]: {
+        fontSize: "4.8rem",
+      },
     },
     h2: {
       fontFamily: "Open Sans",
@@ -57,15 +83,10 @@ const theme = createTheme({
       fontSize: "2.4rem",
     },
     button: {
-      fontWeight: 600,
+      fontWeight: 500,
       fontSize: "1.8rem",
     },
   },
-  shadows: [
-    "none",
-    "0px 4px 50px rgba(0, 0, 0, 0.25)",
-    "0px 4px 4px rgba(31, 31, 31, 0.1)",
-  ],
-});
+};
 
 export default theme;
