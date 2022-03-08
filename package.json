@@ -13,6 +13,7 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "next": "latest",
+    "normalize.css": "^8.0.1",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest"

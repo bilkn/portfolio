@@ -66,6 +66,7 @@ const theme = createTheme({
     "0px 4px 50px rgba(0, 0, 0, 0.25)",
     "0px 4px 4px rgba(31, 31, 31, 0.1)",
   ],
+  spacing: ["5px", "15px", "20px", "25px", "30px", "40px", "60px"],
 });
 
 export default theme;
