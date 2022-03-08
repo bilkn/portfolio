@@ -1,12 +1,19 @@
 import * as React from "react";
 import Container from "@mui/material/Container";
-import { Header } from "../components";
+import { Header, Introduction } from "../components";
+import { useTheme } from "@emotion/react";
 
 export default function Index() {
   return (
     <>
-      <Container maxWidth="sm" sx={{ minHeight: "100%", padding: "0" }}>
+      <Container
+        sx={{
+          minHeight: "100%",
+          padding: "0",
+        }}
+      >
         <Header />
+        <Introduction />
       </Container>
     </>
   );

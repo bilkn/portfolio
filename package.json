@@ -12,6 +12,7 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "@mui/styles": "^5.5.0",
     "next": "latest",
     "normalize.css": "^8.0.1",
     "prop-types": "latest",
