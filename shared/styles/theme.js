@@ -30,9 +30,10 @@ let theme = createTheme({
     divider: "#454D56",
     grey: {
       100: "rgba(255, 255, 255, 0.3)",
-      500: "rgba(196, 196, 196, 0.15)",
-      800: "rgba(22, 22, 22, 0.24)",
-      900: "rgba(33, 29, 29, 0.88)",
+      600: "rgba(196, 196, 196, 0.15)",
+      700: "rgba(22, 22, 22, 0.24)",
+      800: "rgba(33, 29, 29, 0.88)",
+      900: "rgba(38, 40, 42, 1)",
     },
   },
   typography: {
@@ -48,6 +49,7 @@ let theme = createTheme({
     "0px 4px 4px rgba(31, 31, 31, 0.1)",
   ],
   spacing: ["5px", "15px", "20px", "24px", "25px", "30px", "40px", "60px"],
+  zIndex: { appBar: 1300 },
 });
 
 theme = {
@@ -78,6 +80,7 @@ theme = {
     h2: {
       fontFamily: "Open Sans",
       fontSize: "3.6rem",
+      fontWeight: 400,
     },
     subtitle1: {
       fontSize: "2.4rem",

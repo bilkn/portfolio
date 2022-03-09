@@ -9,6 +9,9 @@ const componentStyleOverrides = createStyles({
         color: "#fff",
         minWidth: "185px",
         padding: "9px 25px",
+        ":hover": {
+          backgroundColor: "rgba(215, 35, 35, 0.7)",
+        },
       },
     },
   },
