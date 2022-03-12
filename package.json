@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@emotion/cache": "latest",
+    "@emotion/css": "^11.7.1",
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",

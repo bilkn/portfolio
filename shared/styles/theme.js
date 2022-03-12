@@ -79,8 +79,19 @@ theme = {
     },
     h2: {
       fontFamily: "Open Sans",
-      fontSize: "3.6rem",
+      fontSize: "2.4rem",
       fontWeight: 400,
+      [theme.breakpoints.up("md")]: {
+        fontSize: "4.8rem",
+      }, 
+    },
+    h3: {
+      fontFamily: "Open Sans",
+      fontSize: "2rem",
+      fontWeight: 400,
+      [theme.breakpoints.up("md")]: {
+        fontSize: "3.6rem",
+      },
     },
     subtitle1: {
       fontSize: "2.4rem",
