@@ -15,7 +15,7 @@ let theme = createTheme({
       main: "#D72323",
     },
     secondary: {
-      main: "rgba(38, 38, 38, 0.7);",
+      main: "#262626",
     },
     success: {
       main: "#24D480",
@@ -83,7 +83,7 @@ theme = {
       fontWeight: 400,
       [theme.breakpoints.up("md")]: {
         fontSize: "4.8rem",
-      }, 
+      },
     },
     h3: {
       fontFamily: "Open Sans",

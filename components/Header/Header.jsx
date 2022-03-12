@@ -12,7 +12,15 @@ function Header() {
 
   return (
     <>
-      <Box sx={{ position: "relative", zIndex: zIndex.appBar }}>
+      <Box
+        sx={{
+          position: "sticky",
+          top: "0",
+          left: "0",
+          width: "100%",
+          zIndex: zIndex.appBar,
+        }}
+      >
         <header>
           <Stack
             sx={{

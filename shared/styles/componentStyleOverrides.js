@@ -15,6 +15,14 @@ const componentStyleOverrides = createStyles({
       },
     },
   },
+  MuiList: {
+    styleOverrides: {
+      root: {
+        paddingBottom: "0",
+        paddingTop: "0",
+      },
+    },
+  },
 });
 
 export default componentStyleOverrides;
