@@ -67,6 +67,16 @@ theme = {
     body2: {
       fontFamily: "Open Sans",
       fontSize: "1.4rem",
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1.8rem",
+      },
+    },
+    small: {
+      fontSize: "1.3rem",
+      lineHeight: 1,
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1.4rem",
+      },
     },
     h1: {
       fontFamily: "Roboto Mono",
