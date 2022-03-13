@@ -15,7 +15,7 @@ let theme = createTheme({
       main: "#D72323",
     },
     secondary: {
-      main: "rgba(38, 38, 38, 0.7);",
+      main: "#262626",
     },
     success: {
       main: "#24D480",
@@ -67,6 +67,16 @@ theme = {
     body2: {
       fontFamily: "Open Sans",
       fontSize: "1.4rem",
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1.8rem",
+      },
+    },
+    small: {
+      fontSize: "1.3rem",
+      lineHeight: 1,
+      [theme.breakpoints.up("md")]: {
+        fontSize: "1.4rem",
+      },
     },
     h1: {
       fontFamily: "Roboto Mono",
@@ -83,7 +93,7 @@ theme = {
       fontWeight: 400,
       [theme.breakpoints.up("md")]: {
         fontSize: "4.8rem",
-      }, 
+      },
     },
     h3: {
       fontFamily: "Open Sans",

@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   List,
   ListItem,
   ListItemAvatar,
@@ -43,7 +44,9 @@ function Skills() {
       <SectionTitle>All Skills</SectionTitle>
       <Stack>
         <Box>
-          <Typography variant="h3">Frontend</Typography>
+          <Typography variant="h3" sx={{ mb: 2 }}>
+            Frontend
+          </Typography>
           <List>
             <Stack spacing={"10px"}>
               {frontendSkills.map((item) => (
@@ -52,8 +55,11 @@ function Skills() {
             </Stack>
           </List>
         </Box>
+        <Divider sx={{ my: 2 }} />
         <Box>
-          <Typography variant="h3">Backend</Typography>
+          <Typography variant="h3" sx={{ mb: 2 }}>
+            Backend
+          </Typography>
           <List>
             <Stack spacing={"10px"}>
               {backendSkills.map((item) => (
@@ -62,11 +68,14 @@ function Skills() {
             </Stack>
           </List>
         </Box>
+        <Divider sx={{ my: 2 }} />
         <Box>
-          <Typography variant="h3">Tools {"&"} Testing</Typography>
+          <Typography variant="h3" sx={{ mb: 2 }}>
+            Tools {"&"} Testing
+          </Typography>
           <List>
             <Stack spacing={"10px"}>
-            {/*   {backendSkills.map((item) => (
+              {/*   {backendSkills.map((item) => (
                 <SkillsListItem {...item} />
               ))} */}
             </Stack>
