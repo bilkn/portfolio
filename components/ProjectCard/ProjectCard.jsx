@@ -10,6 +10,73 @@ import {
 } from "@mui/material";
 import React from "react";
 import techStackLogoMapping from "../../constants/techStackLogoMapping";
+import techStackTitleMapping from "../../constants/techStackTitleMapping";
+
+export const TechStackContainer = ({
+  techStack,
+  visible,
+  sx = {},
+  logoSize = "20px",
+}) => (
+  <Stack
+    className="card-top-container"
+    direction="row"
+    spacing={4}
+    sx={{
+      alignItems: "center",
+      bgcolor: "grey.800",
+      height: "45px",
+      justifyContent: "center",
+      py: "10px",
+      position: "absolute",
+      left: "0",
+      top: "0",
+      transform: visible ? "" : "translateY(-100%)",
+      transition: "transform 150ms",
+      width: "100%",
+      zIndex: 1,
+      ...sx,
+    }}
+  >
+    {techStack.map((name) => (
+      <Box
+        sx={{
+          display: "flex",
+          width: logoSize,
+        }}
+      >
+        <img
+          src={techStackLogoMapping[name]}
+          className={css`
+            font-size: 1rem;
+          `}
+          alt={name}
+          title={techStackTitleMapping[name]}
+        />
+      </Box>
+    ))}
+  </Stack>
+);
+
+export const ProjectCardTitle = ({ title, sx = {} }) => (
+  <CardHeader
+    sx={{
+      bgcolor: "hsla(0, 6%, 12%, 0.88)",
+      bottom: "0",
+      left: "0",
+      position: "absolute",
+      py: "10px",
+      height: "45px",
+      width: "100%",
+      ...sx,
+    }}
+    title={
+      <Typography variant="body2" sx={{ lineHeight: 1.4, textAlign: "center" }}>
+        {title}
+      </Typography>
+    }
+  />
+);
 
 function ProjectCard(props) {
   const { title, description, img, techStack, website, sourceCode } = props;
@@ -20,7 +87,7 @@ function ProjectCard(props) {
         height: "100%",
         width: "100%",
         position: "relative",
-        "&:hover .tech-stack-container": {
+        "&:hover .card-top-container": {
           backgroundColor: "#211D1D",
           transform: "translateY(0)",
         },
@@ -32,41 +99,7 @@ function ProjectCard(props) {
         },
       }}
     >
-      <Stack
-        className="tech-stack-container"
-        direction="row"
-        spacing={4}
-        sx={{
-          alignItems: "center",
-          bgcolor: "grey.800",
-          height: "45px",
-          justifyContent: "center",
-          py: "10px",
-          position: "absolute",
-          left: "0",
-          top: "0",
-          transform: "translateY(-100%)",
-          transition: "transform 150ms",
-          width: "100%",
-        }}
-      >
-        {techStack.map((name) => (
-          <Box
-            sx={{
-              display: "flex",
-              width: "20px",
-            }}
-          >
-            <img
-              src={techStackLogoMapping[name]}
-              className={css`
-                font-size: 1rem;
-              `}
-              alt={name}
-            />
-          </Box>
-        ))}
-      </Stack>
+      <TechStackContainer techStack={techStack} />
       <Box sx={{ height: "100%", width: "100%" }}>
         <img
           className={css`
@@ -117,25 +150,7 @@ function ProjectCard(props) {
           </Button>
         </Stack>
       </CardContent>
-      <CardHeader
-        sx={{
-          bgcolor: "hsla(0, 6%, 12%, 0.88)",
-          bottom: "0",
-          left: "0",
-          position: "absolute",
-          py: "10px",
-          height: "45px",
-          width: "100%",
-        }}
-        title={
-          <Typography
-            variant="body2"
-            sx={{ lineHeight: 1.4, textAlign: "center" }}
-          >
-            {title}
-          </Typography>
-        }
-      />
+      <ProjectCardTitle title={title} />
     </Card>
   );
 }

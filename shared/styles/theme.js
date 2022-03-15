@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import { responsiveFontSizes } from "@mui/material";
 import componentStyleOverrides from "./componentStyleOverrides";
+import mixins from "./mixins";
 
 // Create a theme instance.
 let theme = createTheme({
@@ -29,7 +30,7 @@ let theme = createTheme({
     },
     divider: "#454D56",
     grey: {
-      100: "rgba(255, 255, 255, 0.3)",
+      100: "rgba(255, 255, 255, 0.07)",
       600: "rgba(196, 196, 196, 0.15)",
       700: "rgba(22, 22, 22, 0.24)",
       800: "rgba(33, 29, 29, 0.88)",
@@ -111,6 +112,7 @@ theme = {
       fontSize: "1.8rem",
     },
   },
+  mixins,
 };
 
 export default theme;

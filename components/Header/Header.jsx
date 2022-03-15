@@ -3,7 +3,7 @@ import { Box, IconButton, Stack } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import useHeaderLogic from "../../hooks/useHeaderLogic";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import { MobileMenu } from "..";
 
 function Header() {
   const { showMenu, handlers } = useHeaderLogic();
