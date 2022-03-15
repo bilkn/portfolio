@@ -1,5 +1,4 @@
 import { createStyles } from "@mui/styles";
-import theme from "./theme";
 
 const componentStyleOverrides = createStyles({
   MuiButton: {
@@ -27,6 +26,30 @@ const componentStyleOverrides = createStyles({
       root: {
         paddingBottom: "0",
         paddingTop: "0",
+      },
+    },
+  },
+  MuiInput: {
+    styleOverrides: {
+      root: {
+        backgroundColor: "rgba(255, 255, 255, 0.04)",
+        borderRadius: "10px",
+        fontSize: "1.4rem",
+        overflow: "hidden",
+        marginTop: "0",
+        "&.Mui-focused": {
+          border: "1px solid",
+          borderColor: "#24D480",
+        },
+        "&::before, &::after": {
+          display: "none",
+        },
+        "& .MuiInput-input": {
+          padding: "14px 22px",
+        },
+        "&&": {
+          marginTop: "5px",
+        },
       },
     },
   },

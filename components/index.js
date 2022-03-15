@@ -6,6 +6,8 @@ export { default as SectionTitle } from "./SectionTitle/SectionTitle";
 export { default as Skills } from "./Skills/Skills";
 export { default as ProjectCard } from "./ProjectCard/ProjectCard";
 export { default as Projects } from "./Projects/Projects";
+export { default as Contact } from "./Contact/Contact";
+export { default as CustomInput } from "./CustomInput/CustomInput";
 
 /* MOBILE ONLY COMPONENTS */
 

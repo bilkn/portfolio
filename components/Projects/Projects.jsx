@@ -8,8 +8,8 @@ const ProjectTitle = ({ title }) => (
     <Box
       sx={{
         bgcolor: "primary.main",
-        height: "40px",
-        mr: 1,
+        height: { xs: "30px", md: "40px" },
+        mr: { xs: '10px', md: 1 },
         width: "5px",
       }}
     />
