@@ -3,7 +3,7 @@ import { FormLabel, Input, Stack, Typography } from "@mui/material";
 import React from "react";
 
 function CustomInput(props) {
-  const { label, id, name, value, onChange } = props;
+  const { label, id, name, value, onChange, ...rest } = props;
   return (
     <fieldset
       className={css`
@@ -22,6 +22,7 @@ function CustomInput(props) {
           value={value}
           onChange={onChange}
           fullWidth
+          {...rest}
         />
       </Stack>
     </fieldset>

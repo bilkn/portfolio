@@ -1,10 +1,12 @@
 import {
   Box,
+  Button,
   FormControl,
   FormLabel,
   Input,
   InputLabel,
   Stack,
+  TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -19,9 +21,9 @@ function Contact() {
     <Section>
       <Stack direction="row">
         <Box>
-          <Box>
+          <Box sx={{ textAlign: "center" }}>
             <Typography variant="h2">Contact Me</Typography>
-            <Typography>
+            <Typography variant="body2" sx={{ mt: "10px" }}>
               I’m interested in freelance opportunities - espacially ambitious.
               lorem ipsum
             </Typography>
@@ -46,7 +48,9 @@ function Contact() {
                       label="Name"
                       name="name"
                       value={name}
-                      onChange={handleInputChange}
+                      onChange={({ target: { value } }) =>
+                        handleInputChange(value, "name")
+                      }
                     />
                   </FormControl>
                 </Box>
@@ -57,22 +61,34 @@ function Contact() {
                       label="Email"
                       name="email"
                       value={email}
-                      onChange={handleInputChange}
+                      onChange={({ target: { value } }) =>
+                        handleInputChange(value, "email")
+                      }
+                    />
+                  </FormControl>
+                </Box>
+                <Box>
+                  <FormControl sx={{ width: "100%" }}>
+                    <CustomInput
+                      id="message"
+                      label="Message"
+                      name="message"
+                      minRows={8}
+                      maxRows={15}
+                      value={message}
+                      onChange={({ target: { value } }) =>
+                        handleInputChange(value, "message")
+                      }
+                      multiline
                     />
                   </FormControl>
                 </Box>
               </Stack>
-              {/*     <Box>
-                <FormControl sx={{ width: "100%" }}>
-                  <CustomInput
-                    id="name"
-                    label="Name"
-                    name="name"
-                    value={name}
-                    onChange={handleInputChange}
-                  />
-                </FormControl>
-              </Box> */}
+              <Box sx={{ textAlign: "center" }}>
+                <Button sx={{ borderRadius: "20px", mt: 2, py: 1 }}>
+                  <Typography variant="small">Send message!</Typography>
+                </Button>
+              </Box>
             </form>
           </Box>
         </Box>
