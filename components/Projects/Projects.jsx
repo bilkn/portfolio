@@ -9,7 +9,7 @@ const ProjectTitle = ({ title }) => (
       sx={{
         bgcolor: "primary.main",
         height: { xs: "30px", md: "40px" },
-        mr: { xs: '10px', md: 1 },
+        mr: { xs: "10px", md: 1 },
         width: "5px",
       }}
     />
@@ -21,28 +21,63 @@ function Projects() {
   return (
     <Section>
       <SectionTitle>Projects</SectionTitle>
-      <ProjectTitle title="Personal Projects" />
-
-      <Grid
-        component={"ul"}
-        sx={{ display: { xs: "none", md: "flex" } }}
-        container
-        spacing={5}
-      >
-        {personalProjects.map((item) => (
-          <Grid component={"li"} sm={6} lg={4} item>
-            <ProjectCard {...item} />{" "}
+      <Stack spacing={2}>
+        <Box>
+          <ProjectTitle title="Personal Projects" />
+          <Grid
+            component={"ul"}
+            sx={{ display: { xs: "none", md: "flex" } }}
+            container
+            spacing={5}
+          >
+            {personalProjects.map((item) => (
+              <Grid component={"li"} sm={6} lg={4} item>
+                <ProjectCard {...item} />{" "}
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
-      <Stack
-        direction="row"
-        sx={{ display: { xs: "flex", md: "none" }, overflowX: "auto", pb: 1 }}
-        spacing={5}
-      >
-        {personalProjects.map((item) => (
-          <MobileProjectCard {...item} />
-        ))}
+          <Stack
+            direction="row"
+            sx={{
+              display: { xs: "flex", md: "none" },
+              overflowX: "auto",
+              pb: 1,
+            }}
+            spacing={5}
+          >
+            {personalProjects.map((item) => (
+              <MobileProjectCard {...item} />
+            ))}
+          </Stack>
+        </Box>
+        <Box>
+          <ProjectTitle title="Works" />
+          <Grid
+            component={"ul"}
+            sx={{ display: { xs: "none", md: "flex" } }}
+            container
+            spacing={5}
+          >
+            {personalProjects.map((item) => (
+              <Grid component={"li"} sm={6} lg={4} item>
+                <ProjectCard {...item} />{" "}
+              </Grid>
+            ))}
+          </Grid>
+          <Stack
+            direction="row"
+            sx={{
+              display: { xs: "flex", md: "none" },
+              overflowX: "auto",
+              pb: 1,
+            }}
+            spacing={5}
+          >
+            {personalProjects.map((item) => (
+              <MobileProjectCard {...item} />
+            ))}
+          </Stack>
+        </Box>
       </Stack>
     </Section>
   );

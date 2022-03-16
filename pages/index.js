@@ -1,6 +1,13 @@
 import * as React from "react";
 import Container from "@mui/material/Container";
-import { Contact, Header, Introduction, Projects, Skills } from "../components";
+import {
+  Contact,
+  Footer,
+  Header,
+  Introduction,
+  Projects,
+  Skills,
+} from "../components";
 import { Box } from "@mui/material";
 
 export default function Index() {
@@ -21,6 +28,7 @@ export default function Index() {
           </Container>
         </main>
       </Box>
+      <Footer />
     </>
   );
 }
