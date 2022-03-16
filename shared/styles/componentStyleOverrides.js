@@ -33,12 +33,13 @@ const componentStyleOverrides = createStyles({
     styleOverrides: {
       root: {
         backgroundColor: "rgba(255, 255, 255, 0.04)",
+        border: "1px solid",
+        borderColor: "transparent",
         borderRadius: "10px",
         fontSize: "1.4rem",
         overflow: "hidden",
         marginTop: "0",
         "&.Mui-focused": {
-          border: "1px solid",
           borderColor: "#24D480",
         },
         "&::before, &::after": {
@@ -50,7 +51,7 @@ const componentStyleOverrides = createStyles({
         "&&": {
           marginTop: "5px",
         },
-      },
+      }
     },
   },
 });

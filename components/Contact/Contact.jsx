@@ -5,6 +5,7 @@ import {
   Input,
   InputLabel,
   Stack,
+  TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -46,7 +47,9 @@ function Contact() {
                       label="Name"
                       name="name"
                       value={name}
-                      onChange={handleInputChange}
+                      onChange={({ target: { value } }) =>
+                        handleInputChange(value, "name")
+                      }
                     />
                   </FormControl>
                 </Box>
@@ -57,22 +60,29 @@ function Contact() {
                       label="Email"
                       name="email"
                       value={email}
-                      onChange={handleInputChange}
+                      onChange={({ target: { value } }) =>
+                        handleInputChange(value, "email")
+                      }
+                    />
+                  </FormControl>
+                </Box>
+                <Box>
+                  <FormControl sx={{ width: "100%" }}>
+                    <CustomInput
+                      id="message"
+                      label="Message"
+                      name="message"
+                      minRows={8}
+                      maxRows={15}
+                      value={message}
+                      onChange={({ target: { value } }) =>
+                        handleInputChange(value, "message")
+                      }
+                      multiline
                     />
                   </FormControl>
                 </Box>
               </Stack>
-              {/*     <Box>
-                <FormControl sx={{ width: "100%" }}>
-                  <CustomInput
-                    id="name"
-                    label="Name"
-                    name="name"
-                    value={name}
-                    onChange={handleInputChange}
-                  />
-                </FormControl>
-              </Box> */}
             </form>
           </Box>
         </Box>
