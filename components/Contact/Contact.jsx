@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   FormControl,
   FormLabel,
   Input,
@@ -20,9 +21,9 @@ function Contact() {
     <Section>
       <Stack direction="row">
         <Box>
-          <Box>
+          <Box sx={{ textAlign: "center" }}>
             <Typography variant="h2">Contact Me</Typography>
-            <Typography>
+            <Typography variant="body2" sx={{ mt: "10px" }}>
               I’m interested in freelance opportunities - espacially ambitious.
               lorem ipsum
             </Typography>
@@ -83,6 +84,11 @@ function Contact() {
                   </FormControl>
                 </Box>
               </Stack>
+              <Box sx={{ textAlign: "center" }}>
+                <Button sx={{ borderRadius: "20px", mt: 2, py: 1 }}>
+                  <Typography variant="small">Send message!</Typography>
+                </Button>
+              </Box>
             </form>
           </Box>
         </Box>
