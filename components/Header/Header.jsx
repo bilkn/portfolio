@@ -56,12 +56,14 @@ function Header() {
                 justifyContent: "space-between",
               }}
             >
-              <Image
-                src={"/logo.svg"}
-                alt="Bilkan"
-                width="118px"
-                height={"26px"}
-              />
+              <Link href="#about">
+                <Image
+                  src={"/logo.svg"}
+                  alt="Bilkan"
+                  width="118px"
+                  height={"26px"}
+                />
+              </Link>
               <IconButton onClick={toggleMenu}>
                 <img src="/icons/hamburger-icon.svg" alt="" />
               </IconButton>
@@ -75,12 +77,14 @@ function Header() {
                 px: 2,
               }}
             >
-              <Image
-                src={"/logo.svg"}
-                alt="Bilkan"
-                width="180px"
-                height={"26px"}
-              />
+              <Link href="#about">
+                <Image
+                  src={"/logo.svg"}
+                  alt="Bilkan"
+                  width="180px"
+                  height={"26px"}
+                />
+              </Link>
               <nav>
                 <List>
                   <Stack direction="row" spacing={7}>
@@ -89,14 +93,13 @@ function Header() {
                         <Link
                           sx={{
                             color: "white",
-                            cursor: "pointer",
                             textDecoration: "none",
-                            transition:'color 150ms',
+                            transition: "color 150ms",
                             "&:hover": {
                               color: "primary.main",
                             },
                           }}
-                          to={to}
+                          href={to}
                         >
                           {name}
                         </Link>
