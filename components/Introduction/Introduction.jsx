@@ -18,7 +18,7 @@ function Introduction() {
           <Typography variant="h1" sx={{ mb: { xs: 1, md: 2 } }}>
             Hello, I am Bilkan
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" sx={{ md: { lineHeight: 1.6 } }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor,
             quisque at urna ornare penatibus hac etiam consectetur pretium.
             Suspendisse neque, enim pellentesque leo.
@@ -34,7 +34,7 @@ function Introduction() {
             ml: { xs: "0", md: 2 },
           }}
         >
-{/*           <Image
+          {/*           <Image
             src="/images/avatar.png"
             alt="Avatar"
             width="326px"

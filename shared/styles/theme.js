@@ -63,7 +63,6 @@ theme = {
       fontSize: "1.8rem",
       [theme.breakpoints.up("md")]: {
         fontSize: "2.4rem",
-        lineHeight: 1.6,
       },
     },
     body2: {

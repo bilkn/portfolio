@@ -33,20 +33,31 @@ const SkillsListItem = ({ name, logo, dropShadow }) => {
           loading="lazy"
         />
       </ListItemAvatar>
-      <ListItemText sx={{ ml: 1 }} primary={name} />
+      <ListItemText
+        sx={{ ml: 1 }}
+        primary={<Typography variant="body2">{name}</Typography>}
+      />
     </ListItem>
   );
 };
+
+const SkillTitle = ({ children }) => (
+  <Typography
+    variant="h3"
+    sx={{ mb: 2 }}
+    textAlign={{ xs: "start", md: "center" }}
+  >
+    {children}
+  </Typography>
+);
 
 function Skills() {
   return (
     <Section>
       <SectionTitle>All Skills</SectionTitle>
-      <Stack>
-        <Box>
-          <Typography variant="h3" sx={{ mb: 2 }}>
-            Frontend
-          </Typography>
+      <Stack direction={{ xs: "column", md: "row" }}>
+        <Box sx={{ flexBasis: "100%" }}>
+          <SkillTitle>Frontend</SkillTitle>
           <List>
             <Stack spacing={"10px"}>
               {frontendSkills.map((item) => (
@@ -55,11 +66,18 @@ function Skills() {
             </Stack>
           </List>
         </Box>
-        <Divider sx={{ my: 2 }} />
-        <Box>
-          <Typography variant="h3" sx={{ mb: 2 }}>
-            Backend
-          </Typography>
+        <Divider sx={{ display: { xs: "block", md: "none" }, my: 2 }} />
+        <Divider
+          sx={{
+            display: { xs: "none", md: "block" },
+            mt: 7,
+            mx: 2,
+            height: "440px",
+          }}
+          orientation="vertical"
+        />
+        <Box sx={{ flexBasis: "100%" }}>
+          <SkillTitle>Backend</SkillTitle>
           <List>
             <Stack spacing={"10px"}>
               {backendSkills.map((item) => (
@@ -68,11 +86,19 @@ function Skills() {
             </Stack>
           </List>
         </Box>
-        <Divider sx={{ my: 2 }} />
-        <Box>
-          <Typography variant="h3" sx={{ mb: 2 }}>
-            Tools {"&"} Testing
-          </Typography>
+        <Divider sx={{ display: { xs: "block", md: "none" }, my: 2 }} />
+        <Divider
+          sx={{
+            display: { xs: "none", md: "block" },
+            flexShrink: "0",
+            mx: 2,
+            mt: 7,
+            height: "440px",
+          }}
+          orientation="vertical"
+        />
+        <Box sx={{ flexBasis: "100%" }}>
+          <SkillTitle> Tools {"&"} Testing</SkillTitle>
           <List>
             <Stack spacing={"10px"}>
               {/*   {backendSkills.map((item) => (
