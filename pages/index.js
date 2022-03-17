@@ -7,6 +7,7 @@ import {
   Introduction,
   Projects,
   Skills,
+  SocialLinks,
 } from "../components";
 import { Box } from "@mui/material";
 
@@ -14,6 +15,7 @@ export default function Index() {
   return (
     <>
       <Header />
+      <SocialLinks />
       <Box sx={{ pb: 5 }}>
         <main>
           <Container
