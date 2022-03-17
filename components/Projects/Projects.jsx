@@ -21,7 +21,7 @@ function Projects() {
   return (
     <Section>
       <SectionTitle>Projects</SectionTitle>
-      <Stack spacing={2}>
+      <Stack spacing={6}>
         <Box>
           <ProjectTitle title="Personal Projects" />
           <Grid
