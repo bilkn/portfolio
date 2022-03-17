@@ -29,6 +29,13 @@ const componentStyleOverrides = createStyles({
       },
     },
   },
+  MuiLink: {
+    styleOverrides: {
+      root: {
+        cursor: "pointer",
+      },
+    },
+  },
   MuiInput: {
     styleOverrides: {
       root: {
@@ -51,7 +58,7 @@ const componentStyleOverrides = createStyles({
         "&&": {
           marginTop: "5px",
         },
-      }
+      },
     },
   },
 });

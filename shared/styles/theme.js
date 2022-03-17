@@ -53,8 +53,6 @@ let theme = createTheme({
   zIndex: { appBar: 1300 },
 });
 
-
-
 theme = {
   ...theme,
   components: componentStyleOverrides,

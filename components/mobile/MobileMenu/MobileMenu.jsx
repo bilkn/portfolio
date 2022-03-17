@@ -1,6 +1,7 @@
 import { GitHub, LinkedIn, Mail } from "@mui/icons-material";
 import { Button, Drawer, Link, List, ListItem, Stack, Typography } from "@mui/material";
 import React from "react";
+import { socialLinks } from "../../../fixtures/socialLinks";
 
 function MobileMenu(props) {
   const { showMenu } = props;
@@ -11,11 +12,6 @@ function MobileMenu(props) {
     { name: "Projects", to: "#" },
   ];
 
-  const socialLinks = [
-    { icon: <LinkedIn />, to: "https://www.linkedin.com/in/bilkankonus/" },
-    { icon: <GitHub />, to: "https://github.com/bilkn" },
-    { icon: <Mail />, to: "mailto:bilkan.konus@gmail.com" },
-  ];
 
   return (
     <Drawer
