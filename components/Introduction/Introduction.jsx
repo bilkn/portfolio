@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Introduction() {
   return (
-    <Section>
+    <Section id='about'>
       <Box
         sx={{
           alignItems: "center",
