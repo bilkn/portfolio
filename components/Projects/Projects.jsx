@@ -19,7 +19,7 @@ const ProjectTitle = ({ title }) => (
 
 function Projects() {
   return (
-    <Section>
+    <Section id='projects'>
       <SectionTitle>Projects</SectionTitle>
       <Stack spacing={6}>
         <Box>

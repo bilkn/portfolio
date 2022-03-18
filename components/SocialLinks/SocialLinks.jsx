@@ -24,11 +24,11 @@ function SocialLinks() {
                 href={to}
                 sx={{
                   borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
-                  color: "text.primary",
+                  color: "text.secondary",
                   p: 0,
                   transition: "color 150ms",
                   "&:hover": {
-                    color: "text.secondary",
+                    color: "text.primary",
                   },
                 }}
                 target="_blank"
