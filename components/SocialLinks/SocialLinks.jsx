@@ -1,8 +1,11 @@
+import { useTheme } from "@emotion/react";
 import { Box, Link, List, Stack } from "@mui/material";
 import React from "react";
 import { socialLinks } from "../../fixtures/socialLinks";
 
 function SocialLinks() {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
@@ -14,6 +17,7 @@ function SocialLinks() {
         top: "50%",
         transform: "translateY(-50%)",
         position: "fixed",
+        zIndex: theme.zIndex.overlayUI,
       }}
     >
       <List>

@@ -25,81 +25,41 @@ import useContactLogic from "./useContactLogic";
 }} */
 
 const ContactDecor = () => (
-  <Box sx={{ width: "60%" }}>
-    <svg width="100%" viewBox="0 0 637 453" fill="none">
-      <g filter="url(#filter0_b_0_1)">
-        <rect
-          width="637"
-          height="453"
-          rx="10"
-          fill="url(#paint0_radial_0_1)"
-          fill-opacity="0.7"
-        />
-        <rect
-          x="0.5"
-          y="0.5"
-          width="636"
-          height="452"
-          rx="9.5"
-          stroke="white"
-          stroke-opacity="0.3"
-          style={{ mixBlendMode: "overlay" }}
-        />
-      </g>
-      <path
-        opacity="0.7"
-        d="M319 223L629.903 0.25H8.09689L319 223Z"
-        fill="url(#paint1_radial_0_1)"
-        fill-opacity="0.7"
-      />
-      <defs>
-        <filter
-          id="filter0_b_0_1"
-          x="-12"
-          y="-12"
-          width="661"
-          height="477"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feGaussianBlur in="BackgroundImage" stdDeviation="6" />
-          <feComposite
-            in2="SourceAlpha"
-            operator="in"
-            result="effect1_backgroundBlur_0_1"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_backgroundBlur_0_1"
-            result="shape"
-          />
-        </filter>
-        <radialGradient
-          id="paint0_radial_0_1"
-          cx="0"
-          cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
-          gradientTransform="rotate(36.1765) scale(789.145 586.548)"
-        >
-          <stop stop-color="white" stop-opacity="0.7" />
-          <stop offset="0.991538" stop-color="white" stop-opacity="0.1" />
-        </radialGradient>
-        <radialGradient
-          id="paint1_radial_0_1"
-          cx="0"
-          cy="0"
-          r="1"
-          gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(-47.4999 -24.5001) rotate(22.9457) scale(892.63 2157.94)"
-        >
-          <stop stop-color="white" stop-opacity="0.3" />
-          <stop offset="1" stop-color="#999999" stop-opacity="0.7" />
-        </radialGradient>
-      </defs>
-    </svg>
+  <Box
+    sx={{
+      position: "relative",
+      display: { xs: "none", md: "block" },
+      width: "60%",
+    }}
+  >
+    <Box sx={{ position: "absolute", right: "0", top: "0", width: "30%" }}>
+      <img src="/images/mail/contact-mail-sign.png" alt="" />
+    </Box>
+    <Box>
+      <img src="/images/mail/contact-mail.png" alt="" />
+    </Box>
+    <Box
+      sx={{
+        position: "absolute",
+        left: "0",
+        top: "0",
+        transform: "translate(0,60px) rotate(44deg)",
+        width: "30%",
+      }}
+    >
+      <img src="/images/mail/triangle.png" alt="" />
+    </Box>
+    <Box
+      sx={{
+        position: "absolute",
+        right: "0",
+        bottom: "0",
+        transform: "translate(70px,0) rotate(136deg)",
+        width: "30%",
+      }}
+    >
+      <img src="/images/mail/triangle.png" alt="" />
+    </Box>
   </Box>
 );
 
@@ -109,9 +69,13 @@ function Contact() {
 
   return (
     <Section>
-      <Stack direction="row" sx={{ alignItems: "center" }} spacing={"70px"}>
+      <Stack
+        direction="row"
+        sx={{ alignItems: "center" }}
+        spacing={{ md: "70px" }}
+      >
         <ContactDecor />
-        <Box sx={{ width: "40%" }}>
+        <Box sx={{ width: { xs: "100%", md: "40%" } }}>
           <Box sx={{ textAlign: "center" }}>
             <Typography variant="h2">Contact Me</Typography>
             <Typography variant="body2" sx={{ mt: "10px" }}>

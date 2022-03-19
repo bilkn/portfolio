@@ -50,7 +50,7 @@ let theme = createTheme({
     "0px 4px 4px rgba(31, 31, 31, 0.1)",
   ],
   spacing: ["5px", "15px", "20px", "24px", "25px", "30px", "40px", "60px"],
-  zIndex: { appBar: 1300 },
+  zIndex: { appBar: 1300, overlayUI: 100 },
 });
 
 theme = {
