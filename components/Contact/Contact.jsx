@@ -13,17 +13,6 @@ import React from "react";
 import { Section, CustomInput } from "..";
 import useContactLogic from "./useContactLogic";
 
-/* sx={{
-  aspectRatio: "637/453",
-  background:
-    "radial-gradient(102.83% 102.83% at 0% 0%, rgba(255, 255, 255, 0.49) 0%, rgba(255, 255, 255, 0.07) 99.15%)",
-  borderRadius: "10px",
-  border: "1px solid rgba(255, 255, 255, 0.3)",
-  position: "relative",
-  overflow: "hidden",
- 
-}} */
-
 const ContactDecor = () => (
   <Box
     sx={{

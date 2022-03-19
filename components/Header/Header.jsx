@@ -8,6 +8,7 @@ import {
   List,
   ListItem,
   Stack,
+  Typography,
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -101,7 +102,7 @@ function Header() {
                           }}
                           href={to}
                         >
-                          {name}
+                          <Typography>{name}</Typography>
                         </Link>
                       </ListItem>
                     ))}

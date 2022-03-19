@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Introduction() {
   return (
-    <Section id='about'>
+    <Section id="about">
       <Box
         sx={{
           alignItems: "center",
@@ -14,14 +14,14 @@ function Introduction() {
           display: "flex",
         }}
       >
-        <Box sx={{ flexBasis: "100%" }}>
+        <Box sx={{ flexBasis: "55%" }}>
           <Typography variant="h1" sx={{ mb: { xs: 1, md: 2 } }}>
-            Hello, I am Bilkan
+            Hello I am Bilkan, <br />a Fullstack Developer
           </Typography>
           <Typography variant="body1" sx={{ lineHeight: { md: 1.6 } }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor,
-            quisque at urna ornare penatibus hac etiam consectetur pretium.
-            Suspendisse neque, enim pellentesque leo.
+            I have been building personal/professional projects for four years.
+            I can build scalable web/mobile applications in a very short
+            time.
           </Typography>
           <Button sx={{ mt: 5, display: { xs: "none", md: "block" } }}>
             Contact
@@ -29,7 +29,7 @@ function Introduction() {
         </Box>
         <Box
           sx={{
-            flexBasis: "100%",
+            flexBasis: "45%",
             mt: { xs: 5, md: "0" },
             ml: { xs: "0", md: 2 },
           }}
