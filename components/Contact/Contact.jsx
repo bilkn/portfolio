@@ -57,7 +57,7 @@ function Contact() {
   const { handleInputChange } = handlers;
 
   return (
-    <Section>
+    <Section id="contact">
       <Stack
         direction="row"
         sx={{ alignItems: "center" }}

@@ -39,7 +39,8 @@ function Introduction() {
             loading="eager"
             camera-controls
             auto-rotate
-            src="/images/3d-avatar-test.glb"
+            src="/images/3d-avatar.glb"
+            post='/images/avatar.png'
             alt="Bilkan Konus"
             camera-orbit="45deg 55deg 100m"
             style={{ height: "400px" }}

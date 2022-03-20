@@ -1,21 +1,28 @@
 import { GitHub, LinkedIn, Mail } from "@mui/icons-material";
-import { Button, Drawer, Link, List, ListItem, Stack, Typography } from "@mui/material";
+import {
+  Button,
+  Drawer,
+  Link,
+  List,
+  ListItem,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { socialLinks } from "../../../fixtures/socialLinks";
 
 function MobileMenu(props) {
-  const { showMenu } = props;
+  const { showMenu, onItemClick } = props;
 
   const menuItems = [
-    { name: "About", to: "#" },
-    { name: "Skills", to: "#" },
-    { name: "Projects", to: "#" },
+    { name: "About", to: "#about" },
+    { name: "Skills", to: "#skills" },
+    { name: "Projects", to: "#projects" },
   ];
-
 
   return (
     <Drawer
-      sx={{ backgroundColor: "grey.900" }}
+      sx={{ backgroundColor: "grey.900", display: { md: "none" } }}
       PaperProps={{ sx: { top: "80px", width: "100%" } }}
       open={showMenu}
       anchor="right"
@@ -34,29 +41,58 @@ function MobileMenu(props) {
             <Stack spacing={4}>
               {menuItems.map(({ name, to }) => (
                 <ListItem sx={{ p: "0" }}>
-                  <Link href={to} underline="none">
-                    <Typography
-                      variant="h2"
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      color: "text.primary",
+                      fontSize: "4.8rem",
+                      fontFamily: "Roboto mono",
+                    }}
+                  >
+                    <Link
+                      href={to}
+                      onClick={onItemClick}
                       sx={{
-                        color: "text.primary",
-                        fontSize: "4.8rem",
-                        fontFamily: "Roboto mono",
+                        color: "inherit",
+                        transition: "color 150ms",
+
+                        "&:hover": {
+                          color: "primary.main",
+                        },
                       }}
+                      underline="none"
                     >
                       {name}
-                    </Typography>
-                  </Link>
+                    </Link>
+                  </Typography>
                 </ListItem>
               ))}
             </Stack>
           </List>
         </nav>
-        <Button sx={{ mt: 6 }}>Contact</Button>
+        <Button
+          href="#contact"
+          onClick={onItemClick}
+          sx={{ mt: 6 }}
+          component={Link}
+        >
+          Contact
+        </Button>
         <List sx={{ mt: "auto", py: "0" }}>
           <Stack direction={"row"} spacing={4}>
             {socialLinks.map(({ icon, to }) => (
               <ListItem sx={{ p: "0", width: "auto" }}>
-                <Link href={to} sx={{ color: "text.primary" }} target="_blank">
+                <Link
+                  href={to}
+                  sx={{
+                    color: "text.primary",
+                    transition: "color 150ms",
+                    "&:hover": {
+                      color: "#eeeeee8f",
+                    },
+                  }}
+                  target="_blank"
+                >
                   {React.cloneElement(icon, { sx: { fontSize: "4rem" } })}
                 </Link>
               </ListItem>
