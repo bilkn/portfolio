@@ -13,6 +13,7 @@ import Section from "../Section/Section";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import frontendSkills from "../../fixtures/frontend-skills";
 import backendSkills from "../../fixtures/backend-skills";
+import testingAndTools from "../../fixtures/testing-and-tools";
 import { useTheme } from "@emotion/react";
 import { css } from "@emotion/css";
 
@@ -53,7 +54,7 @@ const SkillTitle = ({ children }) => (
 
 function Skills() {
   return (
-    <Section id='skills'>
+    <Section id="skills">
       <SectionTitle>All Skills</SectionTitle>
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box sx={{ flexBasis: "100%" }}>
@@ -72,7 +73,7 @@ function Skills() {
             display: { xs: "none", md: "block" },
             mt: 7,
             mx: 2,
-            height: "440px",
+            height: "500px",
           }}
           orientation="vertical"
         />
@@ -93,7 +94,7 @@ function Skills() {
             flexShrink: "0",
             mx: 2,
             mt: 7,
-            height: "440px",
+            height: "500px",
           }}
           orientation="vertical"
         />
@@ -101,9 +102,9 @@ function Skills() {
           <SkillTitle> Tools {"&"} Testing</SkillTitle>
           <List>
             <Stack spacing={"10px"}>
-              {/*   {backendSkills.map((item) => (
+              {testingAndTools.map((item) => (
                 <SkillsListItem {...item} />
-              ))} */}
+              ))}
             </Stack>
           </List>
         </Box>

@@ -10,7 +10,13 @@ function HamburgerMenuButton(props) {
         height: "60px",
         position: "relative",
         transitionDuration: "0.5s",
+        right: "10px",
         width: "60px",
+
+        "&:focus": {
+          outline: "1px solid white",
+        },
+
         "& .icon": {
           backgroundColor: "text.primary",
           height: "0",
@@ -23,7 +29,7 @@ function HamburgerMenuButton(props) {
             position: "absolute",
             width: "20px",
             height: "2px",
-            left: "30px",
+            left: "20px",
             backgroundColor: "text.primary",
             content: "''",
             top: "-5px",
@@ -33,14 +39,13 @@ function HamburgerMenuButton(props) {
             position: "absolute",
             width: "20px",
             height: "2px",
-            left: "30px",
+            left: "20px",
             backgroundColor: "text.primary",
             content: "''",
             top: "5px",
           },
         },
       }}
-      data-menu="3"
       {...rest}
     >
       <Box
@@ -49,8 +54,7 @@ function HamburgerMenuButton(props) {
           open
             ? {
                 "&::before": {
-                  transform:
-                    "rotateZ(135deg) scaleX(1.25) translate(0, -5px)",
+                  transform: "rotateZ(135deg) scaleX(1.25) translate(0, -5px)",
                 },
                 "&::after": {
                   transform:

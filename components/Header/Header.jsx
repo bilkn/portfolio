@@ -109,12 +109,14 @@ function Header() {
                   </Stack>
                 </List>
               </nav>
-              <Button>Contact</Button>
+              <Button href="#contact" component={Link}>
+                Contact
+              </Button>
             </Box>
           </Container>
         </header>
       </Box>
-      <MobileMenu showMenu={showMenu} />
+      <MobileMenu showMenu={showMenu} onItemClick={toggleMenu} />
     </>
   );
 }
