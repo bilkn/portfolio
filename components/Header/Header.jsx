@@ -8,11 +8,13 @@ import {
   List,
   ListItem,
   Stack,
+  Typography,
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import useHeaderLogic from "../../hooks/useHeaderLogic";
 import { MobileMenu } from "..";
+import { HamburgerMenuButton } from "./components";
 
 function Header() {
   const { showMenu, handlers } = useHeaderLogic();
@@ -54,6 +56,7 @@ function Header() {
                 display: { xs: "flex", md: "none" },
                 minHeight: "80px",
                 justifyContent: "space-between",
+                position: "relative",
               }}
             >
               <Link href="#about">
@@ -64,9 +67,7 @@ function Header() {
                   height={"26px"}
                 />
               </Link>
-              <IconButton onClick={toggleMenu}>
-                <img src="/icons/hamburger-icon.svg" alt="" />
-              </IconButton>
+              <HamburgerMenuButton open={showMenu} onClick={toggleMenu} />
             </Box>
             <Box
               sx={{
@@ -101,7 +102,7 @@ function Header() {
                           }}
                           href={to}
                         >
-                          {name}
+                          <Typography>{name}</Typography>
                         </Link>
                       </ListItem>
                     ))}

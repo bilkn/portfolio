@@ -11,6 +11,7 @@
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
+    "@google/model-viewer": "^1.10.1",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "@mui/styles": "^5.5.0",

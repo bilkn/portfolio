@@ -22,6 +22,7 @@ function CustomInput(props) {
           value={value}
           onChange={onChange}
           fullWidth
+          inputProps={{ sx: { fontSize: { xs: "1.4rem", md: "1.8rem" } } }}
           {...rest}
         />
       </Stack>
