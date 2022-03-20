@@ -73,7 +73,7 @@ function Skills() {
             display: { xs: "none", md: "block" },
             mt: 7,
             mx: 2,
-            height: "440px",
+            height: "500px",
           }}
           orientation="vertical"
         />
@@ -94,7 +94,7 @@ function Skills() {
             flexShrink: "0",
             mx: 2,
             mt: 7,
-            height: "440px",
+            height: "500px",
           }}
           orientation="vertical"
         />

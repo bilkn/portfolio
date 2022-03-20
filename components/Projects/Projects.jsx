@@ -1,5 +1,6 @@
 import React from "react";
 import personalProjects from "../../fixtures/personal-projects";
+import works from "../../fixtures/works";
 import { Section, SectionTitle, ProjectCard, MobileProjectCard } from "..";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 
@@ -19,7 +20,7 @@ const ProjectTitle = ({ title }) => (
 
 function Projects() {
   return (
-    <Section id='projects'>
+    <Section id="projects">
       <SectionTitle>Projects</SectionTitle>
       <Stack spacing={6}>
         <Box>
@@ -58,7 +59,7 @@ function Projects() {
             container
             spacing={5}
           >
-            {personalProjects.map((item) => (
+            {works.map((item) => (
               <Grid component={"li"} sm={6} lg={4} item>
                 <ProjectCard {...item} />{" "}
               </Grid>

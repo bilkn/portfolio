@@ -22,7 +22,7 @@ const frontendSkills = [
   {
     name: "NextJS",
     logo: "/logos/nextjs-logo.png",
-    dropShadow: "0px 1px 4px rgba(0, 0, 0, 0.25)",
+    dropShadow: "0px 1px 4px rgba(0, 0, 0, 0.10)",
   },
   {
     name: "React",
@@ -47,7 +47,7 @@ const frontendSkills = [
   {
     name: "React Query",
     logo: "/logos/react-query-logo.png",
-    dropShadow: "0px 1px 4px #764ABC",
+    dropShadow: "0px 1px 4px #ff4154",
   },
 
   {
@@ -61,15 +61,24 @@ const frontendSkills = [
     dropShadow: "0px 1px 4px #06B6D4",
   },
   {
-    name: "Antd",
-    logo: "/logos/antd-logo.png",
-    dropShadow: "0px 1px 4px #189AFF",
+    name: "Sass",
+    logo: "/logos/sass-logo.png",
+    dropShadow: "0px 1px 4px #CD669A",
   },
-
   {
     name: "Material UI",
     logo: "/logos/material-ui-logo.png",
     dropShadow: "0px 1px 4px #00B0FF",
+  },
+  {
+    name: "Ant Design",
+    logo: "/logos/antd-logo.png",
+    dropShadow: "0px 1px 4px #189AFF",
+  },
+  {
+    name: "React i18next",
+    logo: "/logos/i18next-logo.png",
+    dropShadow: "0px 1px 4px #009688",
   },
 ];
 

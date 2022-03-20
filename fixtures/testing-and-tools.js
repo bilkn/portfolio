@@ -34,6 +34,11 @@ const testingAndTools = [
     logo: "/logos/react-testing-library-logo.png",
     dropShadow: "0px 1px 4px #FC4544",
   },
+  {
+    name: "Firebase",
+    logo: "/logos/firebase-logo.png",
+    dropShadow: "0px 1px 4px #FFA611",
+  },
 ];
 
 export default testingAndTools;

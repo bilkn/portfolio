@@ -68,8 +68,8 @@ function Contact() {
           <Box sx={{ textAlign: "center" }}>
             <Typography variant="h2">Contact Me</Typography>
             <Typography variant="body2" sx={{ mt: "10px" }}>
-              I’m interested in freelance opportunities - espacially ambitious.
-              lorem ipsum
+              Message me to turn your ideas into a competitive product with my
+              passion and skills.
             </Typography>
           </Box>
           <Box
