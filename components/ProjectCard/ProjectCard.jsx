@@ -11,6 +11,7 @@ import {
 import React from "react";
 import techStackLogoMapping from "../../constants/techStackLogoMapping";
 import techStackTitleMapping from "../../constants/techStackTitleMapping";
+import Image from "next/image";
 
 export const TechStackContainer = ({
   techStack,
@@ -100,14 +101,22 @@ function ProjectCard(props) {
       }}
     >
       <TechStackContainer techStack={techStack} />
-      <Box sx={{ height: "100%", width: "100%" }}>
-        <img
-          className={css`
+      <Box
+        sx={{
+          height:'0',
+          paddingBottom: "75%",
+          width: "100%",
+        }}
+      >
+        <Image
+          /*   className={css`
             object-fit: cover;
             height: 100%;
             width: 100%;
-          `}
+          `} */
           src={img}
+          layout="fill"
+          objectFit={"cover"}
         />
       </Box>
       <CardContent
