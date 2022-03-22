@@ -1,3 +1,4 @@
+import { useTheme } from "@emotion/react";
 import { GitHub, LinkedIn, Mail } from "@mui/icons-material";
 import {
   Button,
@@ -7,18 +8,27 @@ import {
   ListItem,
   Stack,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { socialLinks } from "../../../fixtures/socialLinks";
 
 function MobileMenu(props) {
   const { showMenu, onItemClick } = props;
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
 
   const menuItems = [
     { name: "About", to: "#about" },
     { name: "Skills", to: "#skills" },
     { name: "Projects", to: "#projects" },
   ];
+
+  useEffect(() => {
+    if (matches) {
+      onItemClick();
+    }
+  }, []);
 
   return (
     <Drawer

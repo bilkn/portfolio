@@ -10,11 +10,12 @@ function HamburgerMenuButton(props) {
         height: "60px",
         position: "relative",
         transitionDuration: "0.5s",
-        right: "10px",
+        right: { xs: "unset", md: "10px" },
+        left: { xs: "15px", md: "unset" },
         width: "60px",
 
-        "&:focus": {
-          outline: "1px solid white",
+        "&.Mui-focusVisible": {
+          backgroundColor: "primary.main",
         },
 
         "& .icon": {

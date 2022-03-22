@@ -75,7 +75,7 @@ function Header() {
                 justifyContent: "space-between",
                 display: { xs: "none", md: "flex" },
                 minHeight: "90px",
-                px: 2,
+                px: { xs: 2, md: "0" },
               }}
             >
               <Link href="#about">
