@@ -16,6 +16,7 @@ import backendSkills from "../../fixtures/backend-skills";
 import testingAndTools from "../../fixtures/testing-and-tools";
 import { useTheme } from "@emotion/react";
 import { css } from "@emotion/css";
+import Image from "next/image";
 
 const SkillsListItem = ({ name, logo, dropShadow }) => {
   const { palette, shape } = useTheme();
