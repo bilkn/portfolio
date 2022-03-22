@@ -103,21 +103,12 @@ function ProjectCard(props) {
       <TechStackContainer techStack={techStack} />
       <Box
         sx={{
-          height:'0',
+          height: "0",
           paddingBottom: "75%",
           width: "100%",
         }}
       >
-        <Image
-          /*   className={css`
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-          `} */
-          src={img}
-          layout="fill"
-          objectFit={"cover"}
-        />
+        <Image src={img} layout="fill" objectFit={"cover"} />
       </Box>
       <CardContent
         sx={{
