@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import useHeaderLogic from "../../hooks/useHeaderLogic";
+import useHeaderLogic from "./useHeaderLogic";
 import { MobileMenu } from "..";
 import { HamburgerMenuButton } from "./components";
 

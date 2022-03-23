@@ -1,6 +1,7 @@
 import {
   Box,
   Divider,
+  Grow,
   List,
   ListItem,
   ListItemAvatar,
@@ -8,7 +9,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Section from "../Section/Section";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import frontendSkills from "../../fixtures/frontend-skills";
@@ -16,30 +17,38 @@ import backendSkills from "../../fixtures/backend-skills";
 import testingAndTools from "../../fixtures/testing-and-tools";
 import { useTheme } from "@emotion/react";
 import { css } from "@emotion/css";
-import Image from "next/image";
+import useShowItemOnIntersect from "../../hooks/useShowItemOnIntersect";
 
 const SkillsListItem = ({ name, logo, dropShadow }) => {
   const { palette, shape } = useTheme();
+  const { ref, showItem } = useShowItemOnIntersect();
+
   return (
-    <ListItem
-      sx={{ background: palette.grey["600"], borderRadius: shape.borderRadius }}
-    >
-      <ListItemAvatar sx={{ display: "flex", minWidth: "auto" }}>
-        <img
-          className={css`
-            filter: ${`drop-shadow(${dropShadow})`};
-            max-width: 20px;
-          `}
-          src={logo}
-          alt=""
-          loading="lazy"
+    <Grow in={showItem} timeout={1000}>
+      <ListItem
+        sx={{
+          background: palette.grey["600"],
+          borderRadius: shape.borderRadius,
+        }}
+      >
+        <ListItemAvatar sx={{ display: "flex", minWidth: "auto" }}>
+          <img
+            className={css`
+              filter: ${`drop-shadow(${dropShadow})`};
+              max-width: 20px;
+            `}
+            src={showItem ? logo : ""}
+            alt=""
+            loading="lazy"
+            ref={ref}
+          />
+        </ListItemAvatar>
+        <ListItemText
+          sx={{ ml: 1 }}
+          primary={<Typography variant="body2">{name}</Typography>}
         />
-      </ListItemAvatar>
-      <ListItemText
-        sx={{ ml: 1 }}
-        primary={<Typography variant="body2">{name}</Typography>}
-      />
-    </ListItem>
+      </ListItem>
+    </Grow>
   );
 };
 
