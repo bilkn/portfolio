@@ -74,7 +74,7 @@ function Projects() {
             }}
             spacing={5}
           >
-            {personalProjects.map((item) => (
+            {works.map((item) => (
               <MobileProjectCard {...item} />
             ))}
           </Stack>

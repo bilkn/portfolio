@@ -12,6 +12,7 @@ import React from "react";
 import techStackLogoMapping from "../../constants/techStackLogoMapping";
 import techStackTitleMapping from "../../constants/techStackTitleMapping";
 import Image from "next/image";
+import useShowItemOnIntersect from "../../hooks/useShowItemOnIntersect";
 
 export const TechStackContainer = ({
   techStack,
@@ -81,7 +82,8 @@ export const ProjectCardTitle = ({ title, sx = {} }) => (
 
 function ProjectCard(props) {
   const { title, description, img, techStack, website, sourceCode } = props;
-
+  const { showItem, ref } = useShowItemOnIntersect();
+  
   return (
     <Card
       sx={{
@@ -107,6 +109,7 @@ function ProjectCard(props) {
           paddingBottom: "75%",
           width: "100%",
         }}
+        ref={ref}
       >
         <Image src={img} layout="fill" objectFit={"cover"} />
       </Box>

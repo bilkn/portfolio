@@ -19,6 +19,7 @@
     "normalize.css": "^8.0.1",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-intersection-observer": "^8.33.1"
   }
 }

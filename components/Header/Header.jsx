@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import useHeaderLogic from "../../hooks/useHeaderLogic";
+import useHeaderLogic from "./useHeaderLogic";
 import { MobileMenu } from "..";
 import { HamburgerMenuButton } from "./components";
 
@@ -75,7 +75,7 @@ function Header() {
                 justifyContent: "space-between",
                 display: { xs: "none", md: "flex" },
                 minHeight: "90px",
-                px: 2,
+                px: { xs: 2, md: "0" },
               }}
             >
               <Link href="#about">
