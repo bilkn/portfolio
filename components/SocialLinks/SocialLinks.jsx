@@ -25,6 +25,7 @@ function SocialLinks() {
           {socialLinks.map(({ icon, to }, i) => (
             <>
               <Link
+                key={to}
                 href={to}
                 sx={{
                   borderBottom: "1px solid rgba(0, 0, 0, 0.06)",

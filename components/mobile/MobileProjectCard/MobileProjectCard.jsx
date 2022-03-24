@@ -46,7 +46,7 @@ function MobileProjectCard(props) {
         <ProjectCardTitle title={title} sx={{ height: "30px" }} />
       </Box>
       <CardContent sx={{ "&&": { py: "0" }, px: "0" }}>
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 3 }}>
           <Typography variant="body2" sx={{ textAlign: "center" }}>
             {description}
           </Typography>
@@ -54,8 +54,8 @@ function MobileProjectCard(props) {
         <Divider />
         <Stack
           direction="row"
-          spacing={"10px"}
-          sx={{ justifyContent: "center", py: "10px" }}
+          spacing={1}
+          sx={{ justifyContent: "center", py: 1 }}
         >
           <Button
             href={website}

@@ -7,8 +7,8 @@ function Footer() {
       <Box
         sx={{
           backgroundColor: "secondary.main",
-          px: 3,
-          py: { xs: 4, md: "32px" },
+          px: 4,
+          py: { xs: 5, md: "32px" },
         }}
       >
         <Container>

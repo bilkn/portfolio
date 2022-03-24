@@ -23,13 +23,13 @@ export const TechStackContainer = ({
   <Stack
     className="card-top-container"
     direction="row"
-    spacing={4}
+    spacing={5}
     sx={{
       alignItems: "center",
       bgcolor: "grey.800",
       height: "45px",
       justifyContent: "center",
-      py: "10px",
+      py: 1,
       position: "absolute",
       left: "0",
       top: "0",
@@ -42,6 +42,7 @@ export const TechStackContainer = ({
   >
     {techStack.map((name) => (
       <Box
+        key={name}
         sx={{
           display: "flex",
           width: logoSize,
@@ -67,7 +68,7 @@ export const ProjectCardTitle = ({ title, sx = {} }) => (
       bottom: "0",
       left: "0",
       position: "absolute",
-      py: "10px",
+      py: 1,
       height: "45px",
       width: "100%",
       ...sx,
@@ -121,7 +122,7 @@ function ProjectCard(props) {
           flexDirection: "column",
           height: "calc(100% - 88px)",
           justifyContent: "center",
-          px: 6,
+          px: 7,
           position: "absolute",
           top: "50%",
           left: "50%",
@@ -132,10 +133,10 @@ function ProjectCard(props) {
           width: "100%",
         }}
       >
-        <Typography variant="body2" sx={{ mb: 2 }}>
+        <Typography variant="body2" sx={{ mb: 3 }}>
           {description}
         </Typography>
-        <Stack direction="row" spacing={"10px"}>
+        <Stack direction="row" spacing={1}>
           <Button
             href={website}
             target="_blank"
