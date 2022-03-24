@@ -75,7 +75,7 @@ function Header() {
                 justifyContent: "space-between",
                 display: { xs: "none", md: "flex" },
                 minHeight: "90px",
-                px: { xs: 2, md: "0" },
+                px: { xs: 3, md: "0" },
               }}
             >
               <Link href="#about">
@@ -88,9 +88,9 @@ function Header() {
               </Link>
               <nav>
                 <List>
-                  <Stack direction="row" spacing={7}>
+                  <Stack direction="row" spacing={8}>
                     {sectionLinks.map(({ name, to }) => (
-                      <ListItem>
+                      <ListItem key={name}>
                         <Link
                           sx={{
                             color: "white",

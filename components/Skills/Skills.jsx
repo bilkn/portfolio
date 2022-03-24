@@ -70,19 +70,19 @@ function Skills() {
         <Box sx={{ flexBasis: "100%" }}>
           <SkillTitle>Frontend</SkillTitle>
           <List>
-            <Stack spacing={"10px"}>
+            <Stack spacing={1}>
               {frontendSkills.map((item) => (
-                <SkillsListItem {...item} />
+                <SkillsListItem key={item.name} {...item} />
               ))}
             </Stack>
           </List>
         </Box>
-        <Divider sx={{ display: { xs: "block", md: "none" }, my: 2 }} />
+        <Divider sx={{ display: { xs: "block", md: "none" }, my: 3 }} />
         <Divider
           sx={{
             display: { xs: "none", md: "block" },
-            mt: 7,
-            mx: 2,
+            mt: 8,
+            mx: 3,
             height: "500px",
           }}
           orientation="vertical"
@@ -90,20 +90,20 @@ function Skills() {
         <Box sx={{ flexBasis: "100%" }}>
           <SkillTitle>Backend</SkillTitle>
           <List>
-            <Stack spacing={"10px"}>
+            <Stack spacing={1}>
               {backendSkills.map((item) => (
-                <SkillsListItem {...item} />
+                <SkillsListItem key={item.name} {...item} />
               ))}
             </Stack>
           </List>
         </Box>
-        <Divider sx={{ display: { xs: "block", md: "none" }, my: 2 }} />
+        <Divider sx={{ display: { xs: "block", md: "none" }, my: 3 }} />
         <Divider
           sx={{
             display: { xs: "none", md: "block" },
             flexShrink: "0",
-            mx: 2,
-            mt: 7,
+            mx: 3,
+            mt: 8,
             height: "500px",
           }}
           orientation="vertical"
@@ -111,9 +111,9 @@ function Skills() {
         <Box sx={{ flexBasis: "100%" }}>
           <SkillTitle> Tools {"&"} Testing</SkillTitle>
           <List>
-            <Stack spacing={"10px"}>
+            <Stack spacing={1}>
               {testingAndTools.map((item) => (
-                <SkillsListItem {...item} />
+                <SkillsListItem key={item.name} {...item} />
               ))}
             </Stack>
           </List>

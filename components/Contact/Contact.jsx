@@ -67,7 +67,7 @@ function Contact() {
         <Box sx={{ width: { xs: "100%", md: "40%" } }}>
           <Box sx={{ textAlign: "center" }}>
             <Typography variant="h2">Contact Me</Typography>
-            <Typography variant="body2" sx={{ mt: "10px" }}>
+            <Typography variant="body2" sx={{ mt: 1 }}>
               Message me to turn your ideas into a competitive product with my
               passion and skills.
             </Typography>
@@ -78,8 +78,8 @@ function Contact() {
               bgcolor: "grey.700",
               border: "1px solid",
               borderColor: "grey.100",
-              borderRadius: "10px",
-              mt: 2,
+              borderRadius: 1,
+              mt: 3,
               p: "30px 35px",
             }}
           >
@@ -129,7 +129,7 @@ function Contact() {
                 </Box>
               </Stack>
               <Box sx={{ textAlign: "center" }}>
-                <Button sx={{ borderRadius: "20px", mt: 2, py: 1 }}>
+                <Button sx={{ borderRadius: "20px", mt: 3, py: 2 }}>
                   <Typography variant="small">Send message!</Typography>
                 </Button>
               </Box>

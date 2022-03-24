@@ -48,9 +48,9 @@ function MobileMenu(props) {
       >
         <nav>
           <List>
-            <Stack spacing={4}>
+            <Stack spacing={5}>
               {menuItems.map(({ name, to }) => (
-                <ListItem sx={{ p: "0" }}>
+                <ListItem key={name} sx={{ p: "0" }}>
                   <Typography
                     variant="h2"
                     sx={{
@@ -89,9 +89,9 @@ function MobileMenu(props) {
           Contact
         </Button>
         <List sx={{ mt: "auto", py: "0" }}>
-          <Stack direction={"row"} spacing={4}>
+          <Stack direction={"row"} spacing={5}>
             {socialLinks.map(({ icon, to }) => (
-              <ListItem sx={{ p: "0", width: "auto" }}>
+              <ListItem key={to} sx={{ p: "0", width: "auto" }}>
                 <Link
                   href={to}
                   sx={{

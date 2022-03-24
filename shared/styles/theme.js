@@ -41,15 +41,26 @@ let theme = createTheme({
     htmlFontSize: 10,
     fontSize: 10,
   },
-  shape: {
-    borderRadius: "10px",
-  },
+
   shadows: [
     "none",
     "0px 4px 50px rgba(0, 0, 0, 0.25)",
     "0px 4px 4px rgba(31, 31, 31, 0.1)",
   ],
-  spacing: ["5px", "15px", "20px", "24px", "25px", "30px", "40px", "60px"],
+  shape: {
+    borderRadius: "10px",
+  },
+  spacing: [
+    "5px",
+    "10px",
+    "15px",
+    "20px",
+    "24px",
+    "25px",
+    "30px",
+    "40px",
+    "60px",
+  ],
   zIndex: { appBar: 1300, overlayUI: 100 },
 });
 
@@ -88,7 +99,7 @@ theme = {
         fontSize: "4.8rem",
       },
     },
- /*    h2: {
+    /*    h2: {
       fontFamily: "Open Sans",
       fontSize: "2.4rem",
       fontWeight: 400,
@@ -120,6 +131,7 @@ theme = {
       fontSize: "1.8rem",
     },
   },
+
   mixins,
 };
 
