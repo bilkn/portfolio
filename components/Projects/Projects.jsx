@@ -32,7 +32,7 @@ function Projects() {
             spacing={6}
           >
             {personalProjects.map((item) => (
-              <Grid key={item.title} component={"li"} sm={7} lg={5} item>
+              <Grid key={item.title} component={"li"} sm={6} lg={4} item>
                 <ProjectCard {...item} />{" "}
               </Grid>
             ))}
@@ -60,7 +60,7 @@ function Projects() {
             spacing={6}
           >
             {works.map((item) => (
-              <Grid component={"li"} sm={7} lg={5} item>
+              <Grid component={"li"} sm={6} lg={4} item>
                 <ProjectCard key={item.title} {...item} />{" "}
               </Grid>
             ))}

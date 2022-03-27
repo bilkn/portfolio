@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   CardHeader,
+  Grow,
   Stack,
   Typography,
 } from "@mui/material";
@@ -84,78 +85,80 @@ export const ProjectCardTitle = ({ title, sx = {} }) => (
 function ProjectCard(props) {
   const { title, description, img, techStack, website, sourceCode } = props;
   const { showItem, ref } = useShowItemOnIntersect();
-  
+
   return (
-    <Card
-      sx={{
-        height: "100%",
-        width: "100%",
-        position: "relative",
-        "&:hover .card-top-container": {
-          backgroundColor: "#211D1D",
-          transform: "translateY(0)",
-        },
-        "&:hover .MuiCardContent-root": {
-          opacity: 1,
-        },
-        "&:hover .MuiCardHeader-root": {
-          backgroundColor: "#211D1D",
-        },
-      }}
-    >
-      <TechStackContainer techStack={techStack} />
-      <Box
+    <Grow in={showItem} timeout={1000}>
+      <Card
         sx={{
-          height: "0",
-          paddingBottom: "75%",
-          width: "100%",
-        }}
-        ref={ref}
-      >
-        <Image src={img} layout="fill" objectFit={"cover"} />
-      </Box>
-      <CardContent
-        sx={{
-          alignItems: "center",
-          backgroundColor: "rgba(0, 0, 0, 0.71)",
-          display: "flex",
-          flexDirection: "column",
-          height: "calc(100% - 88px)",
-          justifyContent: "center",
-          px: 7,
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          textAlign: "center",
-          transform: "translate(-50%,-50%)",
-          transition: "opacity 150ms",
-          opacity: "0",
-          width: "100%",
+          height: "100%",
+          width: "102%",
+          position: "relative",
+          "&:hover .card-top-container": {
+            backgroundColor: "#211D1D",
+            transform: "translateY(0)",
+          },
+          "&:hover .MuiCardContent-root": {
+            opacity: 1,
+          },
+          "&:hover .MuiCardHeader-root": {
+            backgroundColor: "#211D1D",
+          },
         }}
       >
-        <Typography variant="body2" sx={{ mb: 3 }}>
-          {description}
-        </Typography>
-        <Stack direction="row" spacing={1}>
-          <Button
-            href={website}
-            target="_blank"
-            sx={{ minWidth: "100px", px: "0" }}
-          >
-            <Typography variant="small">Visit Website</Typography>
-          </Button>
-          <Button
-            variant="secondary"
-            href={sourceCode}
-            target="_blank"
-            sx={{ minWidth: "100px", px: "0" }}
-          >
-            <Typography variant="small">Source Code</Typography>
-          </Button>
-        </Stack>
-      </CardContent>
-      <ProjectCardTitle title={title} />
-    </Card>
+        <TechStackContainer techStack={techStack} />
+        <Box
+          sx={{
+            height: "0",
+            paddingBottom: "75%",
+            width: "100%",
+          }}
+          ref={ref}
+        >
+          <Image src={img} layout="fill" objectFit={"cover"} />
+        </Box>
+        <CardContent
+          sx={{
+            alignItems: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.71)",
+            display: "flex",
+            flexDirection: "column",
+            height: "calc(100% - 88px)",
+            justifyContent: "center",
+            px: 7,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            textAlign: "center",
+            transform: "translate(-50%,-50%)",
+            transition: "opacity 150ms",
+            opacity: "0",
+            width: "100%",
+          }}
+        >
+          <Typography variant="body2" sx={{ mb: 3 }}>
+            {description}
+          </Typography>
+          <Stack direction="row" spacing={1}>
+            <Button
+              href={website}
+              target="_blank"
+              sx={{ minWidth: "100px", px: "0" }}
+            >
+              <Typography variant="small">Visit Website</Typography>
+            </Button>
+            <Button
+              variant="secondary"
+              href={sourceCode}
+              target="_blank"
+              sx={{ minWidth: "100px", px: "0" }}
+            >
+              <Typography variant="small">Source Code</Typography>
+            </Button>
+          </Stack>
+        </CardContent>
+        <ProjectCardTitle title={title} />
+      </Card>
+    </Grow>
   );
 }
 

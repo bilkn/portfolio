@@ -5,56 +5,78 @@ import {
   FormLabel,
   Input,
   InputLabel,
+  Slide,
   Stack,
   TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
 import { Section, CustomInput } from "..";
+import { useShowItemOnIntersect } from "../../hooks";
 import useContactLogic from "./useContactLogic";
+import Image from "next/image";
 
-const ContactDecor = () => (
-  <Box
-    sx={{
-      position: "relative",
-      display: { xs: "none", md: "block" },
-      width: "60%",
-    }}
-  >
-    <Box sx={{ position: "absolute", right: "0", top: "0", width: "30%" }}>
-      <img src="/images/mail/contact-mail-sign.png" alt="" />
-    </Box>
-    <Box>
-      <img src="/images/mail/contact-mail.png" alt="" />
-    </Box>
-    <Box
-      sx={{
-        position: "absolute",
-        left: "0",
-        top: "0",
-        transform: "translate(0,60px) rotate(44deg)",
-        width: "30%",
-      }}
-    >
-      <img src="/images/mail/triangle.png" alt="" />
-    </Box>
-    <Box
-      sx={{
-        position: "absolute",
-        right: "0",
-        bottom: "0",
-        transform: "translate(70px,0) rotate(136deg)",
-        width: "30%",
-      }}
-    >
-      <img src="/images/mail/triangle.png" alt="" />
-    </Box>
-  </Box>
-);
+const ContactDecor = () => {
+  const { showItem, ref } = useShowItemOnIntersect();
+
+  return (
+    <Slide direction="right" in={showItem} timeout={1000}>
+      <Box
+        ref={ref}
+        sx={{
+          position: "relative",
+          display: { xs: "none", md: "block" },
+          width: "60%",
+        }}
+      >
+        <Box sx={{ position: "absolute", right: "0", top: "0", width: "30%",zIndex:1 }}>
+          <Image
+            src="/images/mail/contact-mail-sign.png"
+            height="196"
+            width="190"
+            alt=""
+          />
+        </Box>
+        <Box>
+          <Image
+            src="/images/mail/contact-mail.png"
+            width="654"
+            height="480"
+            alt=""
+          />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            left: "0",
+            top: "0",
+            transform: "translate(0,60px) rotate(44deg)",
+
+            width: "30%",
+          }}
+        >
+          <img src="/images/mail/triangle.png" alt="" />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            right: "0",
+            bottom: "0",
+            transform: "translate(70px,0) rotate(136deg)",
+            width: "30%",
+          }}
+        >
+          <img src="/images/mail/triangle.png" alt="" />
+        </Box>
+      </Box>
+    </Slide>
+  );
+};
 
 function Contact() {
   const { handlers, name, email, message } = useContactLogic();
   const { handleInputChange } = handlers;
+  /*   const { showItem, ref } = useShowItemOnIntersect(); */
 
   return (
     <Section id="contact">
