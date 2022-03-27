@@ -9,9 +9,15 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <title>Bilkan: Fullstack Developer</title>
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <meta name="theme-color" content={theme.palette.secondary.main} />
+          <meta
+            name="description"
+            content="
+Turn your business ideas into scalable web and mobile applications in a short time."
+          />
+          <link rel="shortcut icon" href="/static/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link

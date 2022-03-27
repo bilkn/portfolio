@@ -87,27 +87,25 @@ function Header() {
                 />
               </Link>
               <nav>
-                <List>
-                  <Stack direction="row" spacing={8}>
-                    {sectionLinks.map(({ name, to }) => (
-                      <ListItem key={name}>
-                        <Link
-                          sx={{
-                            color: "white",
-                            textDecoration: "none",
-                            transition: "color 150ms",
-                            "&:hover": {
-                              color: "primary.main",
-                            },
-                          }}
-                          href={to}
-                        >
-                          <Typography>{name}</Typography>
-                        </Link>
-                      </ListItem>
-                    ))}
-                  </Stack>
-                </List>
+                <Stack component={List} direction="row" spacing={8}>
+                  {sectionLinks.map(({ name, to }) => (
+                    <ListItem key={name}>
+                      <Link
+                        sx={{
+                          color: "white",
+                          textDecoration: "none",
+                          transition: "color 150ms",
+                          "&:hover": {
+                            color: "primary.main",
+                          },
+                        }}
+                        href={to}
+                      >
+                        <Typography>{name}</Typography>
+                      </Link>
+                    </ListItem>
+                  ))}
+                </Stack>
               </nav>
               <Button href="#contact" component={Link}>
                 Contact

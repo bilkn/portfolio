@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Box, Link, List, Slide, Stack } from "@mui/material";
+import { Box, Link, List, Slide, Stack, Typography } from "@mui/material";
 import React from "react";
 import { socialLinks } from "../../fixtures/socialLinks";
 import { useShowItemOnIntersect } from "../../hooks";
@@ -24,29 +24,38 @@ function SocialLinks() {
           zIndex: theme.zIndex.overlayUI,
         }}
       >
-        <List>
-          <Stack>
-            {socialLinks.map(({ icon, to }, i) => (
-              <>
-                <Link
-                  key={to}
-                  href={to}
+        <List sx={{ display: "flex", flexDirection: "column" }}>
+          {socialLinks.map(({ icon, to, name }) => (
+            <>
+              <Link
+                key={to}
+                href={to}
+                sx={{
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
+                  color: "text.secondary",
+                  p: 0,
+                  transition: "color 150ms",
+                  "&:hover, &:focus": {
+                    color: "text.primary",
+                    outline: "none",
+                  },
+                }}
+                target="_blank"
+              >
+                {React.cloneElement(icon, { sx: { fontSize: "3.5rem" } })}
+                <Typography
+                  component="span"
                   sx={{
-                    borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
-                    color: "text.secondary",
-                    p: 0,
-                    transition: "color 150ms",
-                    "&:hover": {
-                      color: "text.primary",
-                    },
+                    visibility: "hidden",
+                    position: "absolute",
+                    left: "-10000px",
                   }}
-                  target="_blank"
                 >
-                  {React.cloneElement(icon, { sx: { fontSize: "3.5rem" } })}
-                </Link>
-              </>
-            ))}
-          </Stack>
+                  {name}
+                </Typography>
+              </Link>
+            </>
+          ))}
         </List>
       </Box>
     </Slide>

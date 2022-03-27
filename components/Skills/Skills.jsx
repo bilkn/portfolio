@@ -69,13 +69,11 @@ function Skills() {
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box sx={{ flexBasis: "100%" }}>
           <SkillTitle>Frontend</SkillTitle>
-          <List>
-            <Stack spacing={1}>
-              {frontendSkills.map((item) => (
-                <SkillsListItem key={item.name} {...item} />
-              ))}
-            </Stack>
-          </List>
+          <Stack component={List} spacing={1}>
+            {frontendSkills.map((item) => (
+              <SkillsListItem key={item.name} {...item} />
+            ))}
+          </Stack>
         </Box>
         <Divider sx={{ display: { xs: "block", md: "none" }, my: 3 }} />
         <Divider
@@ -89,13 +87,11 @@ function Skills() {
         />
         <Box sx={{ flexBasis: "100%" }}>
           <SkillTitle>Backend</SkillTitle>
-          <List>
-            <Stack spacing={1}>
-              {backendSkills.map((item) => (
-                <SkillsListItem key={item.name} {...item} />
-              ))}
-            </Stack>
-          </List>
+          <Stack component={List} spacing={1}>
+            {backendSkills.map((item) => (
+              <SkillsListItem key={item.name} {...item} />
+            ))}
+          </Stack>
         </Box>
         <Divider sx={{ display: { xs: "block", md: "none" }, my: 3 }} />
         <Divider
@@ -110,13 +106,11 @@ function Skills() {
         />
         <Box sx={{ flexBasis: "100%" }}>
           <SkillTitle> Tools {"&"} Testing</SkillTitle>
-          <List>
-            <Stack spacing={1}>
-              {testingAndTools.map((item) => (
-                <SkillsListItem key={item.name} {...item} />
-              ))}
-            </Stack>
-          </List>
+          <Stack component={List} spacing={1}>
+            {testingAndTools.map((item) => (
+              <SkillsListItem key={item.name} {...item} />
+            ))}
+          </Stack>
         </Box>
       </Stack>
     </Section>
