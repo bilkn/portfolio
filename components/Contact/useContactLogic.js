@@ -5,7 +5,7 @@ function useContactLogic() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [messageStatus, setMessageStatus] = useState("error");
+  const [messageStatus, setMessageStatus] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [formTouched, setFormTouched] = useState({
     email: false,
@@ -40,9 +40,6 @@ function useContactLogic() {
 
   const validateFormFields = () => {
     const errObj = {};
-    if (!email) {
-      errObj.email = "Please provide your email";
-    } else errObj.email = "";
 
     if (!validateEmail(email)) {
       errObj.email = "Please provide valid email";

@@ -20,6 +20,7 @@ export default function Index() {
     <>
       <Head>
         <title>Bilkan: Fullstack Developer</title>
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Script
         type="module"
