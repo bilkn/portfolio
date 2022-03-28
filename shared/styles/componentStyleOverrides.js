@@ -58,6 +58,9 @@ const componentStyleOverrides = createStyles({
         "&&": {
           marginTop: "5px",
         },
+        "&.MuiInputBase-colorError": {
+          borderColor: "#f54307",
+        },
       },
     },
   },

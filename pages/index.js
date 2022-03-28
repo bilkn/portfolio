@@ -11,11 +11,20 @@ import {
 } from "../components";
 import { Box } from "@mui/material";
 import Script from "next/script";
+import Head from "next/head";
+import { init } from "@emailjs/browser";
+init("I7nUN2rGVw7pZE55f");
 
 export default function Index() {
   return (
     <>
-      <Script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" />
+      <Head>
+        <title>Bilkan: Fullstack Developer</title>
+      </Head>
+      <Script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+      />
       <Header />
       <SocialLinks />
       <Box sx={{ pb: 5 }}>

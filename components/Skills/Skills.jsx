@@ -19,7 +19,8 @@ import { useTheme } from "@emotion/react";
 import { css } from "@emotion/css";
 import useShowItemOnIntersect from "../../hooks/useShowItemOnIntersect";
 
-const SkillsListItem = ({ name, logo, dropShadow }) => {
+const SkillsListItem = (props) => {
+  const { name, logo, dropShadow } = props;
   const { palette, shape } = useTheme();
   const { ref, showItem } = useShowItemOnIntersect();
 

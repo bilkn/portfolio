@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { Section, CustomInput } from "..";
+import { Section, CustomInput, ErrorMessage } from "..";
 import { useShowItemOnIntersect } from "../../hooks";
 import useContactLogic from "./useContactLogic";
 import Image from "next/image";
@@ -29,7 +29,15 @@ const ContactDecor = () => {
           width: "60%",
         }}
       >
-        <Box sx={{ position: "absolute", right: "0", top: "0", width: "30%",zIndex:1 }}>
+        <Box
+          sx={{
+            position: "absolute",
+            right: "0",
+            top: "0",
+            width: "30%",
+            zIndex: 1,
+          }}
+        >
           <Image
             src="/images/mail/contact-mail-sign.png"
             height="196"
@@ -74,10 +82,20 @@ const ContactDecor = () => {
 };
 
 function Contact() {
-  const { handlers, name, email, message } = useContactLogic();
-  const { handleInputChange } = handlers;
+  const {
+    handlers,
+    name,
+    email,
+    message,
+    messageStatus,
+    formErrors,
+    formTouched,
+  } = useContactLogic();
+  const { handleInputChange, handleMessageSubmit, handleFormFieldBlur } =
+    handlers;
   /*   const { showItem, ref } = useShowItemOnIntersect(); */
 
+  console.log(formErrors);
   return (
     <Section id="contact">
       <Stack
@@ -105,7 +123,7 @@ function Contact() {
               p: "30px 35px",
             }}
           >
-            <form>
+            <form onSubmit={handleMessageSubmit}>
               <Stack spacing={1}>
                 <Box>
                   <FormControl sx={{ width: "100%" }}>
@@ -117,8 +135,13 @@ function Contact() {
                       onChange={({ target: { value } }) =>
                         handleInputChange(value, "name")
                       }
+                      onBlur={handleFormFieldBlur}
+                      color={formTouched.name && formErrors?.name && "error"}
                     />
                   </FormControl>
+                  {formTouched.name && formErrors?.name && (
+                    <ErrorMessage>{formErrors?.name}</ErrorMessage>
+                  )}
                 </Box>
                 <Box>
                   <FormControl sx={{ width: "100%" }}>
@@ -130,8 +153,13 @@ function Contact() {
                       onChange={({ target: { value } }) =>
                         handleInputChange(value, "email")
                       }
+                      onBlur={handleFormFieldBlur}
+                      color={formTouched.email && formErrors?.email && "error"}
                     />
                   </FormControl>
+                  {formTouched.email && formErrors?.email && (
+                    <ErrorMessage>{formErrors?.email}</ErrorMessage>
+                  )}
                 </Box>
                 <Box>
                   <FormControl sx={{ width: "100%" }}>
@@ -145,13 +173,23 @@ function Contact() {
                       onChange={({ target: { value } }) =>
                         handleInputChange(value, "message")
                       }
+                      onBlur={handleFormFieldBlur}
                       multiline
+                      color={
+                        formTouched.message && formErrors?.message && "error"
+                      }
                     />
                   </FormControl>
+                  {formTouched.message && formErrors?.message && (
+                    <ErrorMessage>{formErrors?.message}</ErrorMessage>
+                  )}
                 </Box>
               </Stack>
               <Box sx={{ textAlign: "center" }}>
-                <Button sx={{ borderRadius: "20px", mt: 3, py: 2 }}>
+                <Button
+                  type="submit"
+                  sx={{ borderRadius: "20px", mt: 3, py: 2 }}
+                >
                   <Typography variant="small">Send message!</Typography>
                 </Button>
               </Box>
