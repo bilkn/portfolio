@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  CircularProgress,
   FormControl,
   FormLabel,
   Input,
@@ -95,7 +96,6 @@ function Contact() {
     handlers;
   /*   const { showItem, ref } = useShowItemOnIntersect(); */
 
-  console.log(formErrors);
   return (
     <Section id="contact">
       <Stack
@@ -136,7 +136,12 @@ function Contact() {
                         handleInputChange(value, "name")
                       }
                       onBlur={handleFormFieldBlur}
-                      color={formTouched.name && formErrors?.name && "error"}
+                      color={
+                        (formTouched.name && formErrors?.name) ||
+                        messageStatus === "error"
+                          ? "error"
+                          : undefined
+                      }
                     />
                   </FormControl>
                   {formTouched.name && formErrors?.name && (
@@ -154,7 +159,12 @@ function Contact() {
                         handleInputChange(value, "email")
                       }
                       onBlur={handleFormFieldBlur}
-                      color={formTouched.email && formErrors?.email && "error"}
+                      color={
+                        (formTouched.email && formErrors?.email) ||
+                        messageStatus === "error"
+                          ? "error"
+                          : undefined
+                      }
                     />
                   </FormControl>
                   {formTouched.email && formErrors?.email && (
@@ -176,7 +186,10 @@ function Contact() {
                       onBlur={handleFormFieldBlur}
                       multiline
                       color={
-                        formTouched.message && formErrors?.message && "error"
+                        (formTouched.message && formErrors?.message) ||
+                        messageStatus === "error"
+                          ? "error"
+                          : undefined
                       }
                     />
                   </FormControl>
@@ -186,12 +199,37 @@ function Contact() {
                 </Box>
               </Stack>
               <Box sx={{ textAlign: "center" }}>
-                <Button
-                  type="submit"
-                  sx={{ borderRadius: "20px", mt: 3, py: 2 }}
-                >
-                  <Typography variant="small">Send message!</Typography>
-                </Button>
+                <Box sx={{ mt: 3 }}>
+                  {messageStatus === "success" ? (
+                    <Typography component="p" variant="small" color="success.main">
+                      Your message has been sent successfully
+                    </Typography>
+                  ) : (
+                    messageStatus === "error" && (
+                      <Typography
+                        component="p"
+                        variant="small"
+                        color="error"
+                        sx={{ mb: 2 }}
+                      >
+                        An error occurred, please try again.
+                      </Typography>
+                    )
+                  )}
+                  {messageStatus !== "success" && (
+                    <Button
+                      type="submit"
+                      sx={{ borderRadius: "20px", py: 2 }}
+                      disabled={messageStatus === "loading"}
+                    >
+                      {messageStatus === "loading" ? (
+                        <CircularProgress color="secondary" size={"14px"} />
+                      ) : (
+                        <Typography variant="small">Send message!</Typography>
+                      )}
+                    </Button>
+                  )}
+                </Box>
               </Box>
             </form>
           </Box>

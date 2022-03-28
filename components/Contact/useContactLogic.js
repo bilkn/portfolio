@@ -5,7 +5,7 @@ function useContactLogic() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [messageStatus, setMessageStatus] = useState("");
+  const [messageStatus, setMessageStatus] = useState("error");
   const [formErrors, setFormErrors] = useState({});
   const [formTouched, setFormTouched] = useState({
     email: false,
@@ -25,6 +25,10 @@ function useContactLogic() {
   };
 
   const resetFormErrors = () => setFormErrors(null);
+
+  const setAllFormFieldAsTouched = () => {
+    setFormTouched({ email: true, name: true, message: true });
+  };
 
   const validateEmail = (email) => {
     return String(email)
@@ -72,9 +76,9 @@ function useContactLogic() {
 
   const handleMessageSubmit = (e) => {
     e.preventDefault();
-
     resetMessageStatus();
     resetFormErrors();
+    setAllFormFieldAsTouched();
 
     if (!validateFormFields()) return;
     handleMessageLoading();
