@@ -22,7 +22,7 @@ let theme = createTheme({
       main: "#24D480",
     },
     error: {
-      main: "#C84800",
+      main: "#f54307",
     },
     text: {
       primary: "#eee",

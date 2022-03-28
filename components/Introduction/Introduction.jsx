@@ -37,7 +37,7 @@ function Introduction() {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "flex-end",
             flexBasis: "45%",
             mt: { xs: 6, md: "0" },
             ml: { xs: "0", md: 3 },

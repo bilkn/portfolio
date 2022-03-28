@@ -10,6 +10,7 @@ export { default as Contact } from "./Contact/Contact";
 export { default as CustomInput } from "./CustomInput/CustomInput";
 export { default as Footer } from "./Footer/Footer";
 export { default as SocialLinks } from "./SocialLinks/SocialLinks";
+export { default as ErrorMessage } from "./ErrorMessage/ErrorMessage";
 
 /* MOBILE ONLY COMPONENTS */
 

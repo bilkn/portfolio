@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "@emotion/cache": "latest",
     "@emotion/css": "^11.7.1",
     "@emotion/react": "latest",
