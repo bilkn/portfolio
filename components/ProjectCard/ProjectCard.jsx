@@ -146,14 +146,16 @@ function ProjectCard(props) {
             >
               <Typography variant="small">Visit Website</Typography>
             </Button>
-            <Button
-              variant="secondary"
-              href={sourceCode}
-              target="_blank"
-              sx={{ minWidth: "100px", px: "0" }}
-            >
-              <Typography variant="small">Source Code</Typography>
-            </Button>
+            {sourceCode && (
+              <Button
+                variant="secondary"
+                href={sourceCode}
+                target="_blank"
+                sx={{ minWidth: "100px", px: "0" }}
+              >
+                <Typography variant="small">Source Code</Typography>
+              </Button>
+            )}
           </Stack>
         </CardContent>
         <ProjectCardTitle title={title} />

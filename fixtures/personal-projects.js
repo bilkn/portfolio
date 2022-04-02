@@ -2,7 +2,7 @@ const personalProjects = [
   {
     title: "CloudNote",
     description: "Cloud based note management app",
-    img: "/images/projects/cloudnote-test.png",
+    img: "/images/projects/cloudnote.png",
     website: "https://cloudnote.netlify.app/",
     sourceCode: "https://github.com/bilkn/cloud-note",
     techStack: ["html", "js", "react", "styledComponents", "firebase"],
