@@ -118,7 +118,7 @@ function Contact() {
               bgcolor: "grey.700",
               border: "1px solid",
               borderColor: "grey.100",
-              borderRadius: 1,
+              borderRadius: '10px',
               mt: 3,
               p: "30px 35px",
             }}
