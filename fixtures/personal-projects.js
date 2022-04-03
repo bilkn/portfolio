@@ -10,7 +10,7 @@ const personalProjects = [
   {
     title: "GlobeExpress",
     description: "Travel agency product landing page",
-    img: "/images/projects/globe-express--2x.jpg",
+    img: "/images/projects/globe-express.png",
     website: "https://globe-express.netlify.app/",
     sourceCode: "https://github.com/bilkn/globe-express",
     techStack: ["html", "js", "react", "styledComponents"],
@@ -18,7 +18,7 @@ const personalProjects = [
   {
     title: "Fastfood Restaurant",
     description: "Fastfood restaurant landing page",
-    img: "/images/projects/fastfood-rest.jpg",
+    img: "/images/projects/fastfood-rest.png",
     website: "https://fastfood-restaurant.netlify.app/",
     sourceCode: "https://github.com/bilkn/fastfood-restaurant",
     techStack: ["html", "js", "react", "styledComponents"],
@@ -34,7 +34,7 @@ const personalProjects = [
   {
     title: "Todo App",
     description: "Basic Redux todo app",
-    img: "/images/projects/todo-app.jpg",
+    img: "/images/projects/todo-app.png",
     website: "https://reddox.netlify.app/",
     sourceCode: "https://github.com/bilkn/redux-todo-app",
     techStack: ["html", "js", "react", "redux", "styledComponents"],

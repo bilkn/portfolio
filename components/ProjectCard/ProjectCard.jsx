@@ -83,7 +83,15 @@ export const ProjectCardTitle = ({ title, sx = {} }) => (
 );
 
 function ProjectCard(props) {
-  const { title, description, img, techStack, website, sourceCode } = props;
+  const {
+    title,
+    description,
+    primaryActionText,
+    img,
+    techStack,
+    website,
+    sourceCode,
+  } = props;
   const { showItem, ref } = useShowItemOnIntersect();
 
   return (
@@ -144,7 +152,9 @@ function ProjectCard(props) {
               target="_blank"
               sx={{ minWidth: "100px", px: "0" }}
             >
-              <Typography variant="small">Visit Website</Typography>
+              <Typography variant="small">
+                {primaryActionText || "Visit Website"}
+              </Typography>
             </Button>
             {sourceCode && (
               <Button

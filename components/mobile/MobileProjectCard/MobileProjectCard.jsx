@@ -4,7 +4,6 @@ import {
   Button,
   Card,
   CardContent,
-  CardHeader,
   Divider,
   Grow,
   Stack,
@@ -41,7 +40,7 @@ function MobileProjectCard(props) {
             width: "100%",
           }}
         >
-          <Image width="222" height="162" layout="fill" src={img} />
+          <Image width="1920" height="1080" layout="responsive" src={img} />
         </Box>
         <Box sx={{ position: "relative" }}>
           <ProjectCardTitle title={title} sx={{ height: "30px" }} />
