@@ -118,11 +118,12 @@ function ProjectCard(props) {
           sx={{
             height: "0",
             paddingBottom: "75%",
+            position: "relative",
             width: "100%",
           }}
           ref={ref}
         >
-          <Image src={img} layout="fill" objectFit={"cover"} />
+          <Image src={img} objectFit="cover" layout="fill" />
         </Box>
         <CardContent
           sx={{
