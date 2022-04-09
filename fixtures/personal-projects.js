@@ -2,7 +2,7 @@ const personalProjects = [
   {
     title: "CloudNote",
     description: "Cloud based note management app",
-    img: "/images/projects/cloudnote.png",
+    img: "/images/projects/cloudnote.jpg",
     website: "https://cloudnote.netlify.app/",
     sourceCode: "https://github.com/bilkn/cloud-note",
     techStack: ["html", "js", "react", "styledComponents", "firebase"],
@@ -10,7 +10,7 @@ const personalProjects = [
   {
     title: "GlobeExpress",
     description: "Travel agency product landing page",
-    img: "/images/projects/globe-express.png",
+    img: "/images/projects/globe-express.jpg",
     website: "https://globe-express.netlify.app/",
     sourceCode: "https://github.com/bilkn/globe-express",
     techStack: ["html", "js", "react", "styledComponents"],
@@ -18,7 +18,7 @@ const personalProjects = [
   {
     title: "Fastfood Restaurant",
     description: "Fastfood restaurant landing page",
-    img: "/images/projects/fastfood-rest.png",
+    img: "/images/projects/fastfood-rest.jpg",
     website: "https://fastfood-restaurant.netlify.app/",
     sourceCode: "https://github.com/bilkn/fastfood-restaurant",
     techStack: ["html", "js", "react", "styledComponents"],
@@ -26,7 +26,7 @@ const personalProjects = [
   {
     title: "Quiz Me",
     description: "A React quiz game",
-    img: "/images/projects/quiz-me.png",
+    img: "/images/projects/quiz-me.jpg",
     website: "https://quizmee.netlify.app/",
     sourceCode: "https://github.com/bilkn/quiz-me",
     techStack: ["html", "ts", "react", "styledComponents"],
@@ -34,7 +34,7 @@ const personalProjects = [
   {
     title: "Todo App",
     description: "Basic Redux todo app",
-    img: "/images/projects/todo-app.png",
+    img: "/images/projects/todo-app.jpg",
     website: "https://reddox.netlify.app/",
     sourceCode: "https://github.com/bilkn/redux-todo-app",
     techStack: ["html", "js", "react", "redux", "styledComponents"],
