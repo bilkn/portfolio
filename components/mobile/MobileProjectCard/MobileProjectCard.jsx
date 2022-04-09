@@ -35,7 +35,6 @@ function MobileProjectCard(props) {
         />
         <Box
           sx={{
-            height: "162px",
             position: "relative",
             width: "100%",
           }}
