@@ -2,5 +2,5 @@
 
 ## Tech Stack
 
-NextJS
-Material UI
+- NextJS
+- Material UI
