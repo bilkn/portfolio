@@ -1,5 +1,13 @@
 import { useTheme } from "@emotion/react";
-import { Box, Link, List, Slide, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Link,
+  List,
+  ListItem,
+  Slide,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { socialLinks } from "../../fixtures/socialLinks";
 import { useShowItemOnIntersect } from "../../hooks";
@@ -27,33 +35,26 @@ function SocialLinks() {
         <List sx={{ display: "flex", flexDirection: "column" }}>
           {socialLinks.map(({ icon, to, name }) => (
             <>
-              <Link
-                key={to}
-                href={to}
-                sx={{
-                  borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
-                  color: "text.secondary",
-                  p: 0,
-                  transition: "color 150ms",
-                  "&:hover, &:focus": {
-                    color: "text.primary",
-                    outline: "none",
-                  },
-                }}
-                target="_blank"
-              >
-                {React.cloneElement(icon, { sx: { fontSize: "3.5rem" } })}
-                <Typography
-                  component="span"
+              <ListItem sx={{ p: "0" }}>
+                <Link
+                  aria-label={name}
+                  key={to}
+                  href={to}
                   sx={{
-                    visibility: "hidden",
-                    position: "absolute",
-                    left: "-10000px",
+                    borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
+                    color: "text.secondary",
+                    p: 0,
+                    transition: "color 150ms",
+                    "&:hover, &:focus": {
+                      color: "text.primary",
+                      outline: "none",
+                    },
                   }}
+                  target="_blank"
                 >
-                  {name}
-                </Typography>
-              </Link>
+                  {React.cloneElement(icon, { sx: { fontSize: "3.5rem" } })}
+                </Link>
+              </ListItem>
             </>
           ))}
         </List>

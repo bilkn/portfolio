@@ -60,7 +60,6 @@ const ContactDecor = () => {
             left: "0",
             top: "0",
             transform: "translate(0,60px) rotate(44deg)",
-
             width: "30%",
           }}
         >
@@ -118,7 +117,7 @@ function Contact() {
               bgcolor: "grey.700",
               border: "1px solid",
               borderColor: "grey.100",
-              borderRadius: '10px',
+              borderRadius: "10px",
               mt: 3,
               p: "30px 35px",
             }}
@@ -201,7 +200,11 @@ function Contact() {
               <Box sx={{ textAlign: "center" }}>
                 <Box sx={{ mt: 3 }}>
                   {messageStatus === "success" ? (
-                    <Typography component="p" variant="small" color="success.main">
+                    <Typography
+                      component="p"
+                      variant="small"
+                      color="success.main"
+                    >
                       Your message has been sent successfully
                     </Typography>
                   ) : (
