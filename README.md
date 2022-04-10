@@ -1,6 +1,6 @@
 # Portfolio Website
 
-##Tech Stack
+## Tech Stack
 
 NextJS
 Material UI
