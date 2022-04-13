@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import theme from "../shared/styles/theme";
 import createEmotionCache from "../config/createEmotionCache";
+import Script from "next/script";
 
 export default class MyDocument extends Document {
   render() {
@@ -14,7 +15,7 @@ export default class MyDocument extends Document {
           <meta
             name="description"
             content="
-Turn your business ideas into scalable web and mobile applications in a short time."
+            Turn your business ideas into scalable web and mobile applications in a short time."
           />
           <link rel="shortcut icon" href="/static/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,6 +26,19 @@ Turn your business ideas into scalable web and mobile applications in a short ti
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'GA_MEASUREMENT_ID');
+        `}
+          </Script>
         </Head>
         <body>
           <Main />
