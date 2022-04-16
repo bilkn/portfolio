@@ -35,7 +35,6 @@ export default function MyApp(props) {
       <Script>
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
-          console.log('hello world')
           gtag('js', new Date());
           gtag('config', 'G-QF32JLN8M1');`}
       </Script>

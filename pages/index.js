@@ -22,10 +22,7 @@ export default function Index() {
         <title>Bilkan: Fullstack Developer</title>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <Script
-        type="module"
-        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
-      />
+
       <Header />
       <SocialLinks />
       <Box sx={{ pb: 5 }}>
@@ -37,12 +34,17 @@ export default function Index() {
           >
             <Introduction />
             <Skills />
+
             <Projects />
             <Contact />
           </Container>
         </main>
       </Box>
       <Footer />
+      <Script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+      />
     </>
   );
 }
