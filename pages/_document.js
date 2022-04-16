@@ -26,19 +26,7 @@ export default class MyDocument extends Document {
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-3P63TK1Q42"
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-           window.dataLayer = window.dataLayer || [];
-           function gtag(){dataLayer.push(arguments);}
-           gtag('js', new Date());
-         
-           gtag('config', 'G-3P63TK1Q42');
-        `}
-          </Script>
+   
         </Head>
         <body>
           <Main />

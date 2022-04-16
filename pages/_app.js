@@ -9,12 +9,21 @@ import createEmotionCache from "../config/createEmotionCache";
 import "normalize.css/normalize.css";
 import "../shared/styles/global-styles.css";
 import GlobalStyles from "../shared/styles/useStyles";
+import TagManager from "react-gtm-module";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+const tagManagerArgs = {
+  gtmId: "G-QF32JLN8M1",
+};
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+  React.useEffect(() => {
+    TagManager.initialize(tagManagerArgs);
+  }, []);
+
 
   return (
     <CacheProvider value={emotionCache}>
