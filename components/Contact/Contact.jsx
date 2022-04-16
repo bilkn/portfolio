@@ -17,13 +17,10 @@ import { useShowItemOnIntersect } from "../../hooks";
 import useContactLogic from "./useContactLogic";
 import Image from "next/image";
 
-const ContactDecor = () => {
-  const { showItem, ref } = useShowItemOnIntersect();
-
+const ContactDecor = ({ show }) => {
   return (
-    <Slide direction="right" in={showItem} timeout={1000}>
+    <Slide direction="right" in={show} timeout={1000}>
       <Box
-        ref={ref}
         sx={{
           position: "relative",
           display: { xs: "none", md: "block" },
@@ -93,7 +90,7 @@ function Contact() {
   } = useContactLogic();
   const { handleInputChange, handleMessageSubmit, handleFormFieldBlur } =
     handlers;
-  /*   const { showItem, ref } = useShowItemOnIntersect(); */
+  const { showItem, ref } = useShowItemOnIntersect();
 
   return (
     <Section id="contact">
@@ -102,7 +99,7 @@ function Contact() {
         sx={{ alignItems: "center" }}
         spacing={{ md: "70px" }}
       >
-        <ContactDecor />
+        <ContactDecor show={showItem} />
         <Box sx={{ width: { xs: "100%", md: "40%" } }}>
           <Box sx={{ textAlign: "center" }}>
             <Typography variant="h2">Contact Me</Typography>
@@ -148,7 +145,7 @@ function Contact() {
                   )}
                 </Box>
                 <Box>
-                  <FormControl sx={{ width: "100%" }}>
+                  <FormControl ref={ref} sx={{ width: "100%" }}>
                     <CustomInput
                       id="email"
                       label="Email"
