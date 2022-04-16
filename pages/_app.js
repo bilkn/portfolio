@@ -9,33 +9,37 @@ import createEmotionCache from "../config/createEmotionCache";
 import "normalize.css/normalize.css";
 import "../shared/styles/global-styles.css";
 import GlobalStyles from "../shared/styles/useStyles";
-import TagManager from "react-gtm-module";
+import Script from "next/script";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
-const tagManagerArgs = {
-  gtmId: "G-QF32JLN8M1",
-};
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
-  React.useEffect(() => {
-    TagManager.initialize(tagManagerArgs);
-  }, []);
-
-
   return (
-    <CacheProvider value={emotionCache}>
-      <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </CacheProvider>
+    <>
+      <CacheProvider value={emotionCache}>
+        <Head>
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+        </Head>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </CacheProvider>
+      <Script
+        src={"https://www.googletagmanager.com/gtag/js?id=G-QF32JLN8M1"}
+      />
+      <Script>
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          console.log('hello world')
+          gtag('js', new Date());
+          gtag('config', 'G-QF32JLN8M1');`}
+      </Script>
+    </>
   );
 }
 
