@@ -18,14 +18,22 @@ import {
 import Image from "next/image";
 
 function MobileProjectCard(props) {
-  const { description, img, website, sourceCode, title, techStack } = props;
+  const {
+    description,
+    img,
+    website,
+    sourceCode,
+    title,
+    techStack,
+    primaryActionText,
+  } = props;
   const { showItem, ref } = useShowItemOnIntersect();
 
   return (
     <Grow in={showItem} timeout={1000}>
       <Card
         ref={ref}
-        sx={{ flexShrink: 0, maxWidth: "225px", position: "relative" }}
+        sx={{ flexShrink: 0, width: "225px", position: "relative" }}
       >
         <TechStackContainer
           techStack={techStack}
@@ -45,7 +53,7 @@ function MobileProjectCard(props) {
           <ProjectCardTitle title={title} sx={{ height: "30px" }} />
         </Box>
         <CardContent sx={{ "&&": { py: "0" }, px: "0" }}>
-          <Box sx={{ p: 3 }}>
+          <Box sx={{ minHeight: "73px", p: 3 }}>
             <Typography variant="body2" sx={{ textAlign: "center" }}>
               {description}
             </Typography>
@@ -61,16 +69,20 @@ function MobileProjectCard(props) {
               target="_blank"
               sx={{ minWidth: "100px", px: "0" }}
             >
-              <Typography variant="small">Visit Website</Typography>
+              <Typography variant="small">
+                {primaryActionText || "Visit Website"}
+              </Typography>
             </Button>
-            <Button
-              variant="secondary"
-              href={sourceCode}
-              target="_blank"
-              sx={{ minWidth: "100px", px: "0" }}
-            >
-              <Typography variant="small">Source Code</Typography>
-            </Button>
+            {sourceCode && (
+              <Button
+                variant="secondary"
+                href={sourceCode}
+                target="_blank"
+                sx={{ minWidth: "100px", px: "0" }}
+              >
+                <Typography variant="small">Source Code</Typography>
+              </Button>
+            )}
           </Stack>
         </CardContent>
       </Card>
