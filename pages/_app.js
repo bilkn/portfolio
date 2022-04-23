@@ -30,13 +30,13 @@ export default function MyApp(props) {
         </ThemeProvider>
       </CacheProvider>
       <Script
-        src={"https://www.googletagmanager.com/gtag/js?id=G-QF32JLN8M1"}
+        src={"https://www.googletagmanager.com/gtag/js?id=G-3P63TK1Q42"}
       />
       <Script>
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QF32JLN8M1');`}
+          gtag('config', 'G-3P63TK1Q42');`}
       </Script>
     </>
   );

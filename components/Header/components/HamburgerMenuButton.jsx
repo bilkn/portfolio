@@ -6,6 +6,7 @@ function HamburgerMenuButton(props) {
 
   return (
     <IconButton
+      aria-label="Toggle menu"
       sx={{
         height: "60px",
         position: "relative",
