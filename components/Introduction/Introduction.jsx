@@ -1,10 +1,11 @@
 import { Box, Button, Slide, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Section } from "..";
 import useShowItemOnIntersect from "../../hooks/useShowItemOnIntersect";
 
 function Introduction() {
   const { showItem, ref } = useShowItemOnIntersect();
+  const [show3DModel, setShow3DModel] = useState(false);
 
   return (
     <Section id="about">
@@ -16,7 +17,13 @@ function Introduction() {
           display: "flex",
         }}
       >
-        <Slide direction="right" ref={ref} in={showItem} timeout={1000}>
+        <Slide
+          direction="right"
+          ref={ref}
+          in={showItem}
+          addEndListener={() => setShow3DModel(true)}
+          timeout={1000}
+        >
           <Box sx={{ flexBasis: "55%" }}>
             <Typography variant="h1" sx={{ mb: { xs: 2, md: 3 } }}>
               Hello I am Bilkan, <br />a Fullstack Developer
@@ -43,17 +50,19 @@ function Introduction() {
             ml: { xs: "0", md: 3 },
           }}
         >
-          <model-viewer
-            id="reveal"
-            loading="eager"
-            camera-controls
-            auto-rotate
-            src="/images/3d-avatar.glb"
-            post="/images/avatar.png"
-            alt="Bilkan Konus"
-            camera-orbit="25deg 85deg 100m"
-            style={{ height: "400px" }}
-          ></model-viewer>
+          {show3DModel && (
+            <model-viewer
+              id="reveal"
+              loading="eager"
+              camera-controls
+              auto-rotate
+              src="/images/3d-avatar.glb"
+              post="/images/avatar.png"
+              alt="Bilkan Konus"
+              camera-orbit="25deg 85deg 100m"
+              style={{ height: "400px" }}
+            ></model-viewer>
+          )}
         </Box>
         <Button sx={{ mt: 6, display: { xs: "block", md: "none" } }}>
           Contact
