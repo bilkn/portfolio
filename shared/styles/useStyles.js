@@ -1,6 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { createStyles } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { makeStyles, createStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => {
   const { palette } = useTheme();

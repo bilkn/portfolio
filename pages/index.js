@@ -22,7 +22,6 @@ export default function Index() {
         <title>Bilkan: Fullstack Developer</title>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-
       <Header />
       <SocialLinks />
       <Box sx={{ pb: 5 }}>
@@ -34,7 +33,6 @@ export default function Index() {
           >
             <Introduction />
             <Skills />
-
             <Projects />
             <Contact />
           </Container>

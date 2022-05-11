@@ -1,4 +1,4 @@
-import { Box, Button, Slide, Typography } from "@mui/material";
+import { Box, Button, Link, Slide, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Section } from "..";
 import useShowItemOnIntersect from "../../hooks/useShowItemOnIntersect";
@@ -6,6 +6,10 @@ import useShowItemOnIntersect from "../../hooks/useShowItemOnIntersect";
 function Introduction() {
   const { showItem, ref } = useShowItemOnIntersect();
   const [show3DModel, setShow3DModel] = useState(false);
+
+  const handleAnimationEnd = () => {
+    setTimeout(() => setShow3DModel(true), 1000);
+  };
 
   return (
     <Section id="about">
@@ -21,7 +25,7 @@ function Introduction() {
           direction="right"
           ref={ref}
           in={showItem}
-          addEndListener={() => setShow3DModel(true)}
+          addEndListener={handleAnimationEnd}
           timeout={1000}
         >
           <Box sx={{ flexBasis: "55%" }}>
@@ -36,7 +40,15 @@ function Introduction() {
               years. I can build scalable web/mobile applications in a very
               short time.
             </Typography>
-            <Button sx={{ mt: 6, display: { xs: "none", md: "block" } }}>
+            <Button
+              href="#contact"
+              component={Link}
+              sx={{
+                textAlign: "center",
+                mt: 6,
+                display: { xs: "none", md: "inline-block" },
+              }}
+            >
               Contact
             </Button>
           </Box>
@@ -64,7 +76,11 @@ function Introduction() {
             ></model-viewer>
           )}
         </Box>
-        <Button sx={{ mt: 6, display: { xs: "block", md: "none" } }}>
+        <Button
+          href="#contact"
+          component={Link}
+          sx={{ mt: 6, display: { xs: "block", md: "none" } }}
+        >
           Contact
         </Button>
       </Box>

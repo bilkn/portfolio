@@ -59,14 +59,14 @@ function Header() {
                 position: "relative",
               }}
             >
-              <Link href="#about">
+              <a href="http://localhost:3000">
                 <Image
                   src={"/logo.svg"}
                   alt="Bilkan"
                   width="118px"
                   height={"26px"}
                 />
-              </Link>
+              </a>
               <HamburgerMenuButton open={showMenu} onClick={toggleMenu} />
             </Box>
             <Box
@@ -78,14 +78,14 @@ function Header() {
                 px: { xs: 3, md: "0" },
               }}
             >
-              <Link href="#about">
+              <a href="http://localhost:3000">
                 <Image
                   src={"/logo.svg"}
                   alt="Bilkan"
                   width="180px"
                   height={"26px"}
                 />
-              </Link>
+              </a>
               <nav>
                 <Stack component={List} direction="row" spacing={8}>
                   {sectionLinks.map(({ name, to }) => (

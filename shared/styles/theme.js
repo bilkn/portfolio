@@ -48,7 +48,7 @@ let theme = createTheme({
     "0px 4px 4px rgba(31, 31, 31, 0.1)",
   ],
   shape: {
-    borderRadius: "10px",
+    borderRadius: 10,
   },
   spacing: [
     "5px",
