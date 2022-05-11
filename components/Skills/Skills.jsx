@@ -29,7 +29,7 @@ const SkillsListItem = (props) => {
       <ListItem
         sx={{
           background: palette.grey["600"],
-          borderRadius: shape.borderRadius,
+          borderRadius: "10px",
         }}
       >
         <ListItemAvatar sx={{ display: "flex", minWidth: "auto" }}>

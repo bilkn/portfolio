@@ -34,28 +34,26 @@ function SocialLinks() {
       >
         <List sx={{ display: "flex", flexDirection: "column" }}>
           {socialLinks.map(({ icon, to, name }) => (
-            <>
-              <ListItem sx={{ p: "0" }}>
-                <Link
-                  aria-label={name}
-                  key={to}
-                  href={to}
-                  sx={{
-                    borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
-                    color: "text.secondary",
-                    p: 0,
-                    transition: "color 150ms",
-                    "&:hover, &:focus": {
-                      color: "text.primary",
-                      outline: "none",
-                    },
-                  }}
-                  target="_blank"
-                >
-                  {React.cloneElement(icon, { sx: { fontSize: "3.5rem" } })}
-                </Link>
-              </ListItem>
-            </>
+            <ListItem key={to} sx={{ p: "0" }}>
+              <Link
+                aria-label={name}
+                key={to}
+                href={to}
+                sx={{
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
+                  color: "text.secondary",
+                  p: 0,
+                  transition: "color 150ms",
+                  "&:hover, &:focus": {
+                    color: "text.primary",
+                    outline: "none",
+                  },
+                }}
+                target="_blank"
+              >
+                {React.cloneElement(icon, { sx: { fontSize: "3.5rem" } })}
+              </Link>
+            </ListItem>
           ))}
         </List>
       </Box>

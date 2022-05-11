@@ -7,6 +7,10 @@ function Introduction() {
   const { showItem, ref } = useShowItemOnIntersect();
   const [show3DModel, setShow3DModel] = useState(false);
 
+  const handleAnimationEnd = () => {
+    setTimeout(() => setShow3DModel(true), 1000);
+  };
+
   return (
     <Section id="about">
       <Box
@@ -21,7 +25,7 @@ function Introduction() {
           direction="right"
           ref={ref}
           in={showItem}
-          addEndListener={() => setShow3DModel(true)}
+          addEndListener={handleAnimationEnd}
           timeout={1000}
         >
           <Box sx={{ flexBasis: "55%" }}>
@@ -41,7 +45,7 @@ function Introduction() {
               component={Link}
               sx={{
                 textAlign: "center",
-                  mt: 6,
+                mt: 6,
                 display: { xs: "none", md: "inline-block" },
               }}
             >
