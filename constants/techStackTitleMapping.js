@@ -8,6 +8,8 @@ const techStackTitleMapping = {
   express: "ExpressJS",
   node: "NodeJS",
   react: "React",
+  styledComponents: "Styled Components",
+  firebase: "Firebase",
 };
 
 export default techStackTitleMapping;
