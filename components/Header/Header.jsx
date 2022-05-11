@@ -59,7 +59,7 @@ function Header() {
                 position: "relative",
               }}
             >
-              <a href="http://localhost:3000">
+              <a href="https://www.bilkankonus.com/">
                 <Image
                   src={"/logo.svg"}
                   alt="Bilkan"
@@ -78,7 +78,7 @@ function Header() {
                 px: { xs: 3, md: "0" },
               }}
             >
-              <a href="http://localhost:3000">
+              <a href="https://www.bilkankonus.com/">
                 <Image
                   src={"/logo.svg"}
                   alt="Bilkan"
