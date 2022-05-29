@@ -18,6 +18,7 @@ export default class MyDocument extends Document {
             Turn your business ideas into scalable web and mobile applications in a short time."
           />
           <link rel="shortcut icon" href="/static/favicon.png" />
+          <link rel="apple-touch-icon" href="/static/favicon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
