@@ -36,7 +36,7 @@ function Introduction() {
               variant="body1"
               sx={{ lineHeight: { xs: 1.4, md: 1.6 } }}
             >
-              I have been building personal/professional projects for four
+              I have been building personal/professional projects for nearly four
               years. I can build scalable web/mobile applications in a very
               short time.
             </Typography>
