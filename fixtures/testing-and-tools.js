@@ -5,6 +5,11 @@ const testingAndTools = [
     dropShadow: "0px 1px 4px #2C2D35",
   },
   {
+    name: "Adobe XD",
+    logo: "/logos/adobe-xd-logo.png",
+    dropShadow: "0px 1px 4px #470137",
+  },
+  {
     name: "Git",
     logo: "/logos/git-logo.png",
     dropShadow: "0px 1px 4px #F05033",
@@ -20,8 +25,8 @@ const testingAndTools = [
     dropShadow: "0px 1px 4px #FC6D26",
   },
   {
-    name: "Jira",
-    logo: "/logos/jira-logo.png",
+    name: "Bitbucket",
+    logo: "/logos/bitbucket-logo.png",
     dropShadow: "0px 1px 4px #2684FF",
   },
   {
@@ -35,9 +40,29 @@ const testingAndTools = [
     dropShadow: "0px 1px 4px #FC4544",
   },
   {
+    name: "Cypress",
+    logo: "/logos/cypress-logo.png",
+    dropShadow: "0px 1px 4px #139E8D",
+  },
+  {
     name: "Firebase",
     logo: "/logos/firebase-logo.png",
     dropShadow: "0px 1px 4px #FFA611",
+  },
+  {
+    name: "Docker",
+    logo: "/logos/docker-logo.png",
+    dropShadow: "0px 1px 4px #2496ED",
+  },
+  {
+    name: "Jira",
+    logo: "/logos/jira-logo.png",
+    dropShadow: "0px 1px 4px #2684FF",
+  },
+  {
+    name: "Miro",
+    logo: "/logos/miro-logo.png",
+    dropShadow: "0px 1px 4px #FFD12B",
   },
 ];
 

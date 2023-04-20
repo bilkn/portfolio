@@ -66,7 +66,7 @@ const SkillTitle = ({ children }) => (
 function Skills() {
   return (
     <Section id="skills">
-      <SectionTitle>All Skills</SectionTitle>
+      <SectionTitle>Skills</SectionTitle>
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box sx={{ flexBasis: "100%" }}>
           <SkillTitle>Frontend</SkillTitle>

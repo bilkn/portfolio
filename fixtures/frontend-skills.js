@@ -45,6 +45,11 @@ const frontendSkills = [
     dropShadow: "0px 1px 4px #764ABC",
   },
   {
+    name: "Redux Saga",
+    logo: "/logos/redux-saga-logo.png",
+    dropShadow: "0px 1px 4px #764ABC",
+  },
+  {
     name: "React Query",
     logo: "/logos/react-query-logo.png",
     dropShadow: "0px 1px 4px #ff4154",
