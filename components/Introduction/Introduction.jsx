@@ -30,14 +30,13 @@ function Introduction() {
         >
           <Box sx={{ flexBasis: "55%" }}>
             <Typography variant="h1" sx={{ mb: { xs: 2, md: 3 } }}>
-              Hello I am Bilkan, <br />a Full-stack Developer
+              Hello I am Bilkan, <br />a Web Developer
             </Typography>
             <Typography
               variant="body1"
               sx={{ lineHeight: { xs: 1.4, md: 1.6 } }}
             >
-              I have been building personal & professional projects for nearly four
-              years. I can design and develop scalable full-stack web & mobile applications.
+              I have been developing web apps for more than 4 years. I can design and develop scalable full-stack web applications.
             </Typography>
             <Button
               href="#contact"
