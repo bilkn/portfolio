@@ -63,8 +63,8 @@ function Header() {
                 <Image
                   src={"/logo.svg"}
                   alt="Bilkan"
-                  width="118px"
-                  height={"26px"}
+                  width="118"
+                  height={"26"}
                 />
               </a>
               <HamburgerMenuButton open={showMenu} onClick={toggleMenu} />
@@ -82,8 +82,8 @@ function Header() {
                 <Image
                   src={"/logo.svg"}
                   alt="Bilkan"
-                  width="180px"
-                  height={"26px"}
+                  width="180"
+                  height={"26"}
                 />
               </a>
               <nav>
