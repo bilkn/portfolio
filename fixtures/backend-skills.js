@@ -10,6 +10,11 @@ const backendSkills = [
     dropShadow: "0px 1px 4px #393939",
   },
   {
+    name: "NestJS",
+    logo: "/logos/nestjs-logo.png",
+    dropShadow: "0px 1px 4px #e0234f",
+  },
+  {
     name: "MongoDB",
     logo: "/logos/mongodb-logo.png",
     dropShadow: "0px 1px 4px #569B4C",
