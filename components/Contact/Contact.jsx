@@ -104,8 +104,8 @@ function Contact() {
           <Box sx={{ textAlign: "center" }}>
             <Typography variant="h2">Contact Me</Typography>
             <Typography variant="body2" sx={{ mt: 1 }}>
-              I’m open to new opportunities. Whether you have a question or you
-              just want to say hi, just message to me!
+              I'm currently available, contact me to build your project
+              together!
             </Typography>
           </Box>
           <Box
