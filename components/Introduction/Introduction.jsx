@@ -36,7 +36,8 @@ function Introduction() {
               variant="body1"
               sx={{ lineHeight: { xs: 1.4, md: 1.6 } }}
             >
-              I have been developing web apps for more than 4 years. I can build full-stack projects for both startups and mid-to-large companies.
+              I have been developing web apps for more than 4 years. I can build
+              full-stack projects for startups and mid-to-large companies.
             </Typography>
             <Button
               href="#contact"
