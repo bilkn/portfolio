@@ -202,7 +202,7 @@ function Contact() {
                       variant="small"
                       color="success.main"
                     >
-                      Your message has been sent successfully
+                      Your message has been sent successfully!
                     </Typography>
                   ) : (
                     messageStatus === "error" && (

@@ -11,7 +11,9 @@ const techStackLogoMapping = {
   styledComponents: "/logos/styled-components-logo.png",
   jest: "/logos/jest.png",
   reactTestingLibrary: "/logos/react-testing-library-logo.png",
-  firebase: "/logos/firebase-logo.png"
+  firebase: "/logos/firebase-logo.png",
+  nest:'/logos/nestjs-logo.png',
+  mui: '/logos/material-ui-logo.png'  
 };
 
 export default techStackLogoMapping;
