@@ -1,5 +1,12 @@
 const personalProjects = [
   {
+    title: "Assetto",
+    description: "Fullstack personal finance app",
+    img: "/images/projects/assetto.webp",
+    website: "https://assetto.netlify.app/",
+    techStack: ["html", "ts", "react", "node", "nest", "mui", "mongodb"],
+  },
+  {
     title: "CloudNote",
     description: "Cloud based note management app",
     img: "/images/projects/cloudnote.jpg",

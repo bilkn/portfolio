@@ -10,6 +10,8 @@ const techStackTitleMapping = {
   react: "React",
   styledComponents: "Styled Components",
   firebase: "Firebase",
+  mui: "Material UI",
+  nest: "NestJS",
 };
 
 export default techStackTitleMapping;
