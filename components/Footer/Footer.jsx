@@ -12,7 +12,7 @@ function Footer() {
         }}
       >
         <Container>
-          <Typography variant='body2'>© 2022-2024 Bilkan Konus</Typography>
+          <Typography variant='body2'>© 2024 Bilkan Konus</Typography>
         </Container>
       </Box>
     </footer>
